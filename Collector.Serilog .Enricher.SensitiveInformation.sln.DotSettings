@@ -1,0 +1,822 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=DoNotCallOverridableMethodsInConstructor/@EntryIndexedValue">DO_NOT_SHOW</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=InconsistentNaming/@EntryIndexedValue">HINT</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=LocalizableElement/@EntryIndexedValue">HINT</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=RedundantArgumentDefaultValue/@EntryIndexedValue">DO_NOT_SHOW</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=RedundantArgumentName/@EntryIndexedValue">DO_NOT_SHOW</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=UnusedParameter_002ELocal/@EntryIndexedValue">HINT</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=ClassNeverInstantiated_002EGlobal/@EntryIndexedValue">HINT</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=SpecifyACultureInStringConversionExplicitly/@EntryIndexedValue">DO_NOT_SHOW</s:String>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CSharpCodeStyle/ThisQualifier/INSTANCE_MEMBERS_QUALIFY_MEMBERS/@EntryValue">None</s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/ALIGN_LINQ_QUERY/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/ALIGN_MULTILINE_ARGUMENT/@EntryValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/ALIGN_MULTILINE_ARRAY_AND_OBJECT_INITIALIZER/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/ALIGN_MULTILINE_CALLS_CHAIN/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/ANONYMOUS_METHOD_DECLARATION_BRACES/@EntryValue">NEXT_LINE</s:String>
+	<s:Int64 x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/BLANK_LINES_AROUND_SINGLE_LINE_FIELD/@EntryValue">0</s:Int64>
+	<s:Int64 x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/BLANK_LINES_AROUND_SINGLE_LINE_INVOCABLE/@EntryValue">1</s:Int64>
+	<s:Int64 x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/BLANK_LINES_BETWEEN_USING_GROUPS/@EntryValue">1</s:Int64>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/CASE_BLOCK_BRACES/@EntryValue">NEXT_LINE</s:String>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/FORCE_ATTRIBUTE_STYLE/@EntryValue">SEPARATE</s:String>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/FORCE_FIXED_BRACES_STYLE/@EntryValue">ONLY_FOR_MULTILINE</s:String>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/FORCE_FOR_BRACES_STYLE/@EntryValue">ONLY_FOR_MULTILINE</s:String>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/FORCE_FOREACH_BRACES_STYLE/@EntryValue">ONLY_FOR_MULTILINE</s:String>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/FORCE_IFELSE_BRACES_STYLE/@EntryValue">ONLY_FOR_MULTILINE</s:String>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/FORCE_USING_BRACES_STYLE/@EntryValue">ONLY_FOR_MULTILINE</s:String>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/FORCE_WHILE_BRACES_STYLE/@EntryValue">ONLY_FOR_MULTILINE</s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/INDENT_ANONYMOUS_METHOD_BLOCK/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/INDENT_EMBRACED_INITIALIZER_BLOCK/@EntryValue">False</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/INITIALIZER_BRACES/@EntryValue">NEXT_LINE</s:String>
+	<s:Int64 x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/KEEP_BLANK_LINES_IN_CODE/@EntryValue">1</s:Int64>
+	<s:Int64 x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/KEEP_BLANK_LINES_IN_DECLARATIONS/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/KEEP_USER_LINEBREAKS/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/PLACE_CONSTRUCTOR_INITIALIZER_ON_SAME_LINE/@EntryValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/PLACE_FIELD_ATTRIBUTE_ON_SAME_LINE/@EntryValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/PLACE_SIMPLE_ACCESSORHOLDER_ON_SINGLE_LINE/@EntryValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/PLACE_SIMPLE_ACCESSOR_ON_SINGLE_LINE/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/PLACE_TYPE_CONSTRAINTS_ON_SAME_LINE/@EntryValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/PLACE_WHILE_ON_NEW_LINE/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/REDUNDANT_THIS_QUALIFIER_STYLE/@EntryValue">DO_NOT_USE</s:String>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/SIMPLE_EMBEDDED_STATEMENT_STYLE/@EntryValue">LINE_BREAK</s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/SPACE_AFTER_TYPECAST_PARENTHESES/@EntryValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/SPACE_AROUND_MULTIPLICATIVE_OP/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/SPACE_BEFORE_SIZEOF_PARENTHESES/@EntryValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/SPACE_BEFORE_TYPEOF_PARENTHESES/@EntryValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/SPACE_WITHIN_SINGLE_LINE_ARRAY_INITIALIZER_BRACES/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/STICK_COMMENT/@EntryValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/WRAP_AFTER_DECLARATION_LPAR/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/WRAP_AFTER_INVOCATION_LPAR/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/WRAP_ARGUMENTS_STYLE/@EntryValue">CHOP_IF_LONG</s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/WRAP_BEFORE_BINARY_OPSIGN/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/WRAP_BEFORE_FIRST_TYPE_PARAMETER_CONSTRAINT/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/WRAP_EXTENDS_LIST_STYLE/@EntryValue">CHOP_IF_LONG</s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/WRAP_LINES/@EntryValue">False</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/WRAP_OBJECT_AND_COLLECTION_INITIALIZER_STYLE/@EntryValue">CHOP_IF_LONG</s:String>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CSharpFormat/WRAP_PARAMETERS_STYLE/@EntryValue">CHOP_IF_LONG</s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/JavaScriptCodeFormatting/ALIGN_MULTIPLE_DECLARATION/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/CSharpMemberOrderPattern/CustomPattern/@EntryValue">&lt;?xml version="1.0" encoding="utf-8"?&gt;&#xD;
+&lt;!-- Last updated 17.06.2011 --&gt;&#xD;
+&lt;Patterns xmlns="urn:shemas-jetbrains-com:member-reordering-patterns"&gt;&#xD;
+&#xD;
+  &lt;!-- Do not reorder COM interfaces --&gt;&#xD;
+  &lt;Pattern&gt;&#xD;
+    &lt;Match&gt;&#xD;
+      &lt;And Weight="2000"&gt;&#xD;
+        &lt;Kind Is="interface"/&gt;&#xD;
+        &lt;Or&gt;&#xD;
+          &lt;HasAttribute CLRName="System.Runtime.InteropServices.InterfaceTypeAttribute"/&gt;&#xD;
+          &lt;HasAttribute CLRName="System.Runtime.InteropServices.ComImport"/&gt;&#xD;
+        &lt;/Or&gt;&#xD;
+      &lt;/And&gt;&#xD;
+    &lt;/Match&gt;&#xD;
+  &lt;/Pattern&gt;&#xD;
+&#xD;
+  &lt;!-- Do not reorder P/Invoke structs --&gt;&#xD;
+  &lt;Pattern&gt;&#xD;
+    &lt;Match&gt;&#xD;
+      &lt;And Weight="2000"&gt;&#xD;
+        &lt;Or&gt;&#xD;
+          &lt;Kind Is="struct"/&gt;&#xD;
+          &lt;Kind Is="class"/&gt;&#xD;
+        &lt;/Or&gt;&#xD;
+        &lt;HasAttribute CLRName="System.Runtime.InteropServices.StructLayoutAttribute"/&gt;&#xD;
+      &lt;/And&gt;&#xD;
+    &lt;/Match&gt;&#xD;
+  &lt;/Pattern&gt;&#xD;
+&#xD;
+  &lt;!-- Do not reorder P/Invoke classes (called xxxNativeMethods) --&gt;&#xD;
+  &lt;Pattern&gt;&#xD;
+    &lt;Match&gt;&#xD;
+      &lt;And Weight="2000"&gt;&#xD;
+        &lt;Kind Is="class"/&gt;&#xD;
+        &lt;Name Is=".*NativeMethods" /&gt;&#xD;
+      &lt;/And&gt;&#xD;
+    &lt;/Match&gt;&#xD;
+  &lt;/Pattern&gt;&#xD;
+&#xD;
+  &lt;!-- StyleCop pattern --&gt;&#xD;
+  &lt;Pattern RemoveAllRegions="true"&gt;&#xD;
+    &lt;Match&gt;&#xD;
+      &lt;Or Weight="1000" &gt;&#xD;
+        &lt;Kind Is="class" /&gt;&#xD;
+        &lt;Kind Is="struct" /&gt;&#xD;
+        &lt;Kind Is="interface"/&gt;&#xD;
+      &lt;/Or&gt;&#xD;
+    &lt;/Match&gt;&#xD;
+&#xD;
+    &lt;!-- constants and fields --&gt;&#xD;
+    &lt;Entry&gt;&#xD;
+      &lt;Match&gt;&#xD;
+        &lt;Or&gt;&#xD;
+          &lt;Kind Is="constant"/&gt;&#xD;
+          &lt;Kind Is="field"/&gt;&#xD;
+        &lt;/Or&gt;&#xD;
+      &lt;/Match&gt;&#xD;
+      &lt;Sort&gt;&#xD;
+        &lt;Access Order="public internal protected-internal protected private"/&gt;&#xD;
+        &lt;Kind Order="constant field"/&gt;&#xD;
+        &lt;Readonly/&gt;&#xD;
+        &lt;Static/&gt;&#xD;
+        &lt;Name/&gt;&#xD;
+      &lt;/Sort&gt;&#xD;
+    &lt;/Entry&gt;&#xD;
+&#xD;
+    &lt;!-- constructors and destructors --&gt;&#xD;
+    &lt;Entry&gt;&#xD;
+      &lt;Match&gt;&#xD;
+        &lt;Or Weight="200"&gt;&#xD;
+          &lt;Kind Is="constructor"/&gt;&#xD;
+          &lt;Kind Is="destructor"/&gt;&#xD;
+        &lt;/Or&gt;&#xD;
+      &lt;/Match&gt;&#xD;
+      &lt;Sort&gt;&#xD;
+        &lt;Static/&gt;&#xD;
+        &lt;Kind Order="constructor destructor"/&gt;&#xD;
+        &lt;Access Order="public internal protected-internal protected private"/&gt;&#xD;
+      &lt;/Sort&gt;&#xD;
+    &lt;/Entry&gt;&#xD;
+&#xD;
+    &lt;!-- delegates --&gt;&#xD;
+    &lt;Entry&gt;&#xD;
+      &lt;Match&gt;&#xD;
+        &lt;Kind Is="delegate"/&gt;&#xD;
+      &lt;/Match&gt;&#xD;
+      &lt;Sort&gt;&#xD;
+        &lt;Access Order="public internal protected-internal protected private" /&gt;&#xD;
+        &lt;Static /&gt;&#xD;
+        &lt;Name/&gt;&#xD;
+      &lt;/Sort&gt;&#xD;
+    &lt;/Entry&gt;&#xD;
+&#xD;
+    &lt;!-- public events --&gt;&#xD;
+    &lt;Entry&gt;&#xD;
+      &lt;Match&gt;&#xD;
+        &lt;And&gt;&#xD;
+          &lt;Kind Is="event"/&gt;&#xD;
+          &lt;Access Is="public"/&gt;&#xD;
+        &lt;/And&gt;&#xD;
+      &lt;/Match&gt;&#xD;
+      &lt;Sort&gt;&#xD;
+        &lt;Access Order="public" /&gt;&#xD;
+        &lt;Static /&gt;&#xD;
+        &lt;Name/&gt;&#xD;
+      &lt;/Sort&gt;&#xD;
+    &lt;/Entry&gt;&#xD;
+&#xD;
+    &lt;!-- interface events --&gt;&#xD;
+    &lt;Entry&gt;&#xD;
+      &lt;Match&gt;&#xD;
+        &lt;And&gt;&#xD;
+          &lt;Kind Is="event"/&gt;&#xD;
+          &lt;ImplementsInterface/&gt;&#xD;
+        &lt;/And&gt;&#xD;
+      &lt;/Match&gt;&#xD;
+      &lt;Sort&gt;&#xD;
+        &lt;ImplementsInterface Immediate="true"/&gt;&#xD;
+        &lt;Name/&gt;&#xD;
+      &lt;/Sort&gt;&#xD;
+    &lt;/Entry&gt;&#xD;
+&#xD;
+    &lt;!-- other events --&gt;&#xD;
+    &lt;Entry&gt;&#xD;
+      &lt;Match&gt;&#xD;
+        &lt;Kind Is="event"/&gt;&#xD;
+      &lt;/Match&gt;&#xD;
+      &lt;Sort&gt;&#xD;
+        &lt;Access Order="public internal protected-internal protected private" /&gt;&#xD;
+        &lt;Static /&gt;&#xD;
+        &lt;Name/&gt;&#xD;
+      &lt;/Sort&gt;&#xD;
+    &lt;/Entry&gt;&#xD;
+&#xD;
+    &lt;!-- enum --&gt;&#xD;
+    &lt;Entry&gt;&#xD;
+      &lt;Match&gt;&#xD;
+        &lt;Kind Is="enum"/&gt;&#xD;
+      &lt;/Match&gt;&#xD;
+      &lt;Sort&gt;&#xD;
+        &lt;Access Order="public internal protected-internal protected private" /&gt;&#xD;
+        &lt;Name/&gt;&#xD;
+      &lt;/Sort&gt;&#xD;
+    &lt;/Entry&gt;&#xD;
+&#xD;
+    &lt;!-- interfaces --&gt;&#xD;
+    &lt;Entry&gt;&#xD;
+      &lt;Match&gt;&#xD;
+        &lt;Kind Is="interface" /&gt;&#xD;
+      &lt;/Match&gt;&#xD;
+      &lt;Sort&gt;&#xD;
+        &lt;Access Order="public internal protected-internal protected private" /&gt;&#xD;
+        &lt;Name/&gt;&#xD;
+      &lt;/Sort&gt;&#xD;
+    &lt;/Entry&gt;&#xD;
+&#xD;
+    &lt;!-- public properties --&gt;&#xD;
+    &lt;Entry&gt;&#xD;
+      &lt;Match&gt;&#xD;
+        &lt;And&gt;&#xD;
+          &lt;Kind Is="property"/&gt;&#xD;
+          &lt;Access Is="public"/&gt;&#xD;
+        &lt;/And&gt;&#xD;
+      &lt;/Match&gt;&#xD;
+      &lt;Sort&gt;&#xD;
+        &lt;Access Order="public"/&gt;&#xD;
+        &lt;Static/&gt;&#xD;
+        &lt;Name/&gt;&#xD;
+      &lt;/Sort&gt;&#xD;
+    &lt;/Entry&gt;&#xD;
+&#xD;
+    &lt;!-- interface properties --&gt;&#xD;
+    &lt;Entry&gt;&#xD;
+      &lt;Match&gt;&#xD;
+        &lt;And&gt;&#xD;
+          &lt;Kind Is="property"/&gt;&#xD;
+          &lt;ImplementsInterface/&gt;&#xD;
+        &lt;/And&gt;&#xD;
+      &lt;/Match&gt;&#xD;
+      &lt;Sort&gt;&#xD;
+        &lt;ImplementsInterface Immediate="true"/&gt;&#xD;
+        &lt;Name/&gt;&#xD;
+      &lt;/Sort&gt;&#xD;
+    &lt;/Entry&gt;&#xD;
+&#xD;
+    &lt;!-- other properties --&gt;&#xD;
+    &lt;Entry&gt;&#xD;
+      &lt;Match&gt;&#xD;
+        &lt;Kind Is="property"/&gt;&#xD;
+      &lt;/Match&gt;&#xD;
+      &lt;Sort&gt;&#xD;
+        &lt;Access Order="public internal protected-internal protected private"/&gt;&#xD;
+        &lt;Static/&gt;&#xD;
+        &lt;Name/&gt;&#xD;
+      &lt;/Sort&gt;&#xD;
+    &lt;/Entry&gt;&#xD;
+&#xD;
+    &lt;!-- public indexers --&gt;&#xD;
+    &lt;Entry&gt;&#xD;
+      &lt;Match&gt;&#xD;
+        &lt;And&gt;&#xD;
+          &lt;Kind Is="indexer" Weight="1000" /&gt;&#xD;
+          &lt;Access Is="public"/&gt;&#xD;
+        &lt;/And&gt;&#xD;
+      &lt;/Match&gt;&#xD;
+      &lt;Sort&gt;&#xD;
+        &lt;Access Order="public" /&gt;&#xD;
+        &lt;Static/&gt;&#xD;
+        &lt;Name/&gt;&#xD;
+      &lt;/Sort&gt;&#xD;
+    &lt;/Entry&gt;&#xD;
+&#xD;
+    &lt;!-- interface indexers --&gt;&#xD;
+    &lt;Entry&gt;&#xD;
+      &lt;Match&gt;&#xD;
+        &lt;And&gt;&#xD;
+          &lt;Kind Is="indexer" Weight="1000"/&gt;&#xD;
+          &lt;ImplementsInterface/&gt;&#xD;
+        &lt;/And&gt;&#xD;
+      &lt;/Match&gt;&#xD;
+      &lt;Sort&gt;&#xD;
+        &lt;ImplementsInterface Immediate="true"/&gt;&#xD;
+        &lt;Name/&gt;&#xD;
+      &lt;/Sort&gt;&#xD;
+    &lt;/Entry&gt;&#xD;
+&#xD;
+    &lt;!-- other indexers --&gt;&#xD;
+    &lt;Entry&gt;&#xD;
+      &lt;Match&gt;&#xD;
+        &lt;Kind Is="indexer" Weight="1000" /&gt;&#xD;
+      &lt;/Match&gt;&#xD;
+      &lt;Sort&gt;&#xD;
+        &lt;Access Order="public internal protected-internal protected private" /&gt;&#xD;
+        &lt;Static/&gt;&#xD;
+        &lt;Name/&gt;&#xD;
+      &lt;/Sort&gt;&#xD;
+    &lt;/Entry&gt;&#xD;
+&#xD;
+    &lt;!-- public methods --&gt;&#xD;
+    &lt;Entry&gt;&#xD;
+      &lt;Match&gt;&#xD;
+        &lt;And&gt;&#xD;
+          &lt;Kind Is="method"/&gt;&#xD;
+          &lt;Access Is="public"/&gt;&#xD;
+        &lt;/And&gt;&#xD;
+      &lt;/Match&gt;&#xD;
+      &lt;Sort&gt;&#xD;
+        &lt;Access Order="public"/&gt;&#xD;
+        &lt;Static/&gt;&#xD;
+        &lt;Name/&gt;&#xD;
+      &lt;/Sort&gt;&#xD;
+    &lt;/Entry&gt;&#xD;
+&#xD;
+    &lt;!-- interface methods --&gt;&#xD;
+    &lt;Entry&gt;&#xD;
+      &lt;Match&gt;&#xD;
+        &lt;And&gt;&#xD;
+          &lt;Kind Is="method"/&gt;&#xD;
+          &lt;ImplementsInterface/&gt;&#xD;
+        &lt;/And&gt;&#xD;
+      &lt;/Match&gt;&#xD;
+      &lt;Sort&gt;&#xD;
+        &lt;ImplementsInterface Immediate="true"/&gt;&#xD;
+        &lt;Name/&gt;&#xD;
+      &lt;/Sort&gt;&#xD;
+    &lt;/Entry&gt;&#xD;
+&#xD;
+    &lt;!-- other methods --&gt;&#xD;
+    &lt;Entry&gt;&#xD;
+      &lt;Match&gt;&#xD;
+        &lt;Kind Is="method"/&gt;&#xD;
+      &lt;/Match&gt;&#xD;
+      &lt;Sort&gt;&#xD;
+        &lt;Access Order="public internal protected-internal protected private"/&gt;&#xD;
+        &lt;Static/&gt;&#xD;
+        &lt;Name/&gt;&#xD;
+      &lt;/Sort&gt;&#xD;
+    &lt;/Entry&gt;&#xD;
+&#xD;
+    &lt;!-- operators --&gt;&#xD;
+    &lt;Entry&gt;&#xD;
+      &lt;Match&gt;&#xD;
+        &lt;Kind Is="operator"/&gt;&#xD;
+      &lt;/Match&gt;&#xD;
+      &lt;Sort&gt;&#xD;
+        &lt;Access Order="public internal protected-internal protected private" /&gt;&#xD;
+        &lt;Static/&gt;&#xD;
+        &lt;Name/&gt;&#xD;
+      &lt;/Sort&gt;&#xD;
+    &lt;/Entry&gt;&#xD;
+&#xD;
+    &lt;!-- Nested structs --&gt;&#xD;
+    &lt;Entry&gt;&#xD;
+      &lt;Match&gt;&#xD;
+        &lt;Kind Is="struct"&#xD;
+              Weight="600" /&gt;&#xD;
+      &lt;/Match&gt;&#xD;
+      &lt;Sort&gt;&#xD;
+        &lt;Static /&gt;&#xD;
+        &lt;Access Order="public internal protected-internal protected private" /&gt;&#xD;
+        &lt;Name/&gt;&#xD;
+      &lt;/Sort&gt;&#xD;
+    &lt;/Entry&gt;&#xD;
+&#xD;
+    &lt;!-- Nested classes --&gt;&#xD;
+    &lt;Entry&gt;&#xD;
+      &lt;Match&gt;&#xD;
+        &lt;Kind Is="class"&#xD;
+              Weight="700" /&gt;&#xD;
+      &lt;/Match&gt;&#xD;
+      &lt;Sort&gt;&#xD;
+        &lt;Static /&gt;&#xD;
+        &lt;Access Order="public internal protected-internal protected private" /&gt;&#xD;
+        &lt;Name/&gt;&#xD;
+      &lt;/Sort&gt;&#xD;
+    &lt;/Entry&gt;&#xD;
+&#xD;
+    &lt;!-- all other members --&gt;&#xD;
+    &lt;Entry/&gt;&#xD;
+&#xD;
+  &lt;/Pattern&gt;&#xD;
+&lt;/Patterns&gt;</s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/CSharpUsing/AddImportsToDeepestScope/@EntryValue">True</s:Boolean>
+	
+	
+	<s:Boolean x:Key="/Default/CodeStyle/CSharpUsing/QualifiedUsingAtNestedScope/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/FileHeader/FileHeaderText/@EntryValue">--------------------------------------------------------------------------------------------------------------------&#xD;
+&lt;copyright file="$FILENAME$" company="Collector AB"&gt;&#xD;
+  Copyright © Collector AB. All rights reserved.&#xD;
+&lt;/copyright&gt;&#xD;
+--------------------------------------------------------------------------------------------------------------------</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/EventHandlerPatternLong/@EntryValue">$object$_On$event$</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/PredefinedNamingRules/=Constants/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/PredefinedNamingRules/=EnumMember/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/PredefinedNamingRules/=Interfaces/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="I" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/PredefinedNamingRules/=LocalConstants/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AA_BB" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/PredefinedNamingRules/=Locals/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/PredefinedNamingRules/=MethodPropertyEvent/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/PredefinedNamingRules/=Other/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/PredefinedNamingRules/=Parameters/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/PredefinedNamingRules/=PrivateConstants/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AA_BB" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/PredefinedNamingRules/=PrivateInstanceFields/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="_" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/PredefinedNamingRules/=PrivateStaticFields/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/PredefinedNamingRules/=PrivateStaticReadonly/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/PredefinedNamingRules/=PublicFields/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/PredefinedNamingRules/=StaticReadonly/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/PredefinedNamingRules/=TypeParameters/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="T" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/PredefinedNamingRules/=TypesAndNamespaces/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/UserRules/=2e074d92_002D3c2a_002D4fa4_002Db753_002D8dea147bf936/@EntryIndexedValue">&lt;Policy&gt;&lt;Descriptor Staticness="Static, Instance" AccessRightKinds="Public" Description="Namn på klasser och metoder"&gt;&lt;ElementKinds&gt;&lt;Kind Name="CLASS" /&gt;&lt;Kind Name="METHOD" /&gt;&lt;/ElementKinds&gt;&lt;/Descriptor&gt;&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb"&gt;&lt;ExtraRule Prefix="" Suffix="" Style="Aa_bb" /&gt;&lt;/Policy&gt;&lt;/Policy&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=JS_005FBLOCK_005FSCOPE_005FCONSTANT/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=JS_005FBLOCK_005FSCOPE_005FVARIABLE/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=JS_005FCONSTRUCTOR/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=JS_005FFUNCTION/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=JS_005FGLOBAL_005FVARIABLE/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=JS_005FLABEL/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=JS_005FLOCAL_005FVARIABLE/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=JS_005FOBJECT_005FPROPERTY_005FOF_005FFUNCTION/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=JS_005FPARAMETER/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FCLASS/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FENUM/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FENUM_005FMEMBER/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FINTERFACE/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="I" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FINTERFACE_005FFOR_005FJS_005FGLOBAL_005FVARIABLE/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FMODULE/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FMODULE_005FEXPORTED/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FMODULE_005FLOCAL/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FPRIVATE_005FMEMBER_005FACCESSOR/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FPRIVATE_005FSTATIC_005FTYPE_005FFIELD/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FPRIVATE_005FTYPE_005FFIELD/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FPRIVATE_005FTYPE_005FMETHOD/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FPROTECTED_005FMEMBER_005FACCESSOR/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FPROTECTED_005FSTATIC_005FTYPE_005FFIELD/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FPROTECTED_005FTYPE_005FFIELD/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FPROTECTED_005FTYPE_005FMETHOD/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FPUBLIC_005FMEMBER_005FACCESSOR/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FPUBLIC_005FSTATIC_005FTYPE_005FFIELD/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FPUBLIC_005FTYPE_005FFIELD/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FPUBLIC_005FTYPE_005FMETHOD/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FTYPE_005FPARAMETER/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="T" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/VBNaming/EventHandlerPatternLong/@EntryValue">$object$_On$event$</s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/CodeFormatting/JavaScriptCodeFormatting/JavaScriptFormatOther/ALIGN_MULTIPLE_DECLARATION/@EntryValue">True</s:Boolean>
+	
+	
+	
+	
+	
+	
+	
+	
+	<s:String x:Key="/Default/CodeStyle/Naming/VBNaming/PredefinedNamingRules/=Constants/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/VBNaming/PredefinedNamingRules/=EnumMember/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/VBNaming/PredefinedNamingRules/=Interfaces/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="I" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/VBNaming/PredefinedNamingRules/=LocalConstants/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/VBNaming/PredefinedNamingRules/=Locals/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/VBNaming/PredefinedNamingRules/=MethodPropertyEvent/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/VBNaming/PredefinedNamingRules/=Other/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/VBNaming/PredefinedNamingRules/=Parameters/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/VBNaming/PredefinedNamingRules/=PrivateConstants/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/VBNaming/PredefinedNamingRules/=PrivateInstanceFields/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="_" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/VBNaming/PredefinedNamingRules/=PrivateStaticFields/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="_" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/VBNaming/PredefinedNamingRules/=PrivateStaticReadonly/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/VBNaming/PredefinedNamingRules/=PublicFields/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/VBNaming/PredefinedNamingRules/=StaticReadonly/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/VBNaming/PredefinedNamingRules/=TypeParameters/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="T" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/VBNaming/PredefinedNamingRules/=TypesAndNamespaces/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/WebNaming/UserRules/=ASP_005FFIELD/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/WebNaming/UserRules/=ASP_005FHTML_005FCONTROL/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/WebNaming/UserRules/=ASP_005FTAG_005FNAME/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/WebNaming/UserRules/=ASP_005FTAG_005FPREFIX/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/XamlNaming/UserRules/=NAMESPACE_005FALIAS/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/XamlNaming/UserRules/=XAML_005FFIELD/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/XamlNaming/UserRules/=XAML_005FRESOURCE/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:Boolean x:Key="/Default/Environment/SettingsMigration/IsMigratorApplied/=JetBrains_002EReSharper_002EPsi_002ECSharp_002ECodeStyle_002ECSharpFileLayoutPatternsUpgrade/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/SettingsMigration/IsMigratorApplied/=JetBrains_002EReSharper_002EPsi_002ECSharp_002ECodeStyle_002ESettingsUpgrade_002EAddAccessorOwnerDeclarationBracesMigration/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/SettingsMigration/IsMigratorApplied/=JetBrains_002EReSharper_002EPsi_002ECSharp_002ECodeStyle_002ESettingsUpgrade_002EMigrateBlankLinesAroundFieldToBlankLinesAroundProperty/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/SettingsMigration/IsMigratorApplied/=JetBrains_002EReSharper_002EPsi_002ECSharp_002ECodeStyle_002ESettingsUpgrade_002EMigrateThisQualifierSettings/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/SettingsMigration/IsMigratorApplied/=JetBrains_002EReSharper_002EPsi_002EJavaScript_002ECodeStyle_002ESettingsUpgrade_002EJsCodeFormatterSettingsUpgrader/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/SettingsMigration/IsMigratorApplied/=JetBrains_002EReSharper_002EPsi_002EJavaScript_002ECodeStyle_002ESettingsUpgrade_002EJsParsFormattingSettingsUpgrader/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/SettingsMigration/IsMigratorApplied/=JetBrains_002EReSharper_002EPsi_002EJavaScript_002ECodeStyle_002ESettingsUpgrade_002EJsWrapperSettingsUpgrader/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/UnitTesting/SeparateAppDomainPerAssembly/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Housekeeping/SolutionSettingsUpgraded/IsUpgraded/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=48D661704D584F669ACC130946B487A7/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=48D661704D584F669ACC130946B487A7/Name/@EntryValue">The_first_selected_invoice_is_rejected</s:String>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=48D661704D584F669ACC130946B487A7/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;Elements&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.Factories.AddInvoiceDtoFactory_Test" type="NUnitTestFixtureElement" Project="5DB934E7-AB65-4D3C-B943-49C807A0D7FA" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" type="NUnitTestFixtureElement" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" type="NUnitTestFixtureElement" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test" type="NUnitTestFixtureElement" Project="5DB934E7-AB65-4D3C-B943-49C807A0D7FA" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_A_Reservation_Is_Canceled_With_An_Invalid_Integration_Number" ParentId="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test" type="NUnitTestFixtureElement" Project="5DB934E7-AB65-4D3C-B943-49C807A0D7FA" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_A_Valid_Reservation_Is_Activated" ParentId="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test" type="NUnitTestFixtureElement" Project="5DB934E7-AB65-4D3C-B943-49C807A0D7FA" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_A_Valid_Reservation_Is_Canceled" ParentId="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test" type="NUnitTestFixtureElement" Project="5DB934E7-AB65-4D3C-B943-49C807A0D7FA" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_GetPaymentReservation_is_called_" ParentId="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test" type="NUnitTestFixtureElement" Project="5DB934E7-AB65-4D3C-B943-49C807A0D7FA" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestFixtureElement" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.Add_customer_comment_command_raises_event" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="Add_customer_comment_command_raises_event" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold.Address_is_set" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" MethodName="Address_is_set" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.All_comments_with_different_partners_are_shown_when_showSelectedCommitmentsCommentsOnly_is_false" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="All_comments_with_different_partners_are_shown_when_showSelectedCommitmentsCommentsOnly_is_false" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test.And_invoice_request_integration_id_is_valid_the_add_invoice_process_is_called" ParentId="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test" type="NUnitTestElement" TypeName="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test" MethodName="And_invoice_request_integration_id_is_valid_the_add_invoice_process_is_called" Project="5DB934E7-AB65-4D3C-B943-49C807A0D7FA" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test.And_invoice_request_integration_id_was_not_previously_registered_an_exception_is_thrown" ParentId="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test" type="NUnitTestElement" TypeName="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test" MethodName="And_invoice_request_integration_id_was_not_previously_registered_an_exception_is_thrown" Project="5DB934E7-AB65-4D3C-B943-49C807A0D7FA" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test.And_invoice_request_invoice_row_is_empty_an_exception_is_thrown" ParentId="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test" type="NUnitTestElement" TypeName="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test" MethodName="And_invoice_request_invoice_row_is_empty_an_exception_is_thrown" Project="5DB934E7-AB65-4D3C-B943-49C807A0D7FA" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test.And_invoice_request_invoice_row_is_null_an_exception_is_thrown" ParentId="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test" type="NUnitTestElement" TypeName="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test" MethodName="And_invoice_request_invoice_row_is_null_an_exception_is_thrown" Project="5DB934E7-AB65-4D3C-B943-49C807A0D7FA" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test.And_invoice_request_invoice_row_sum_is_negative_an_exception_is_thrown" ParentId="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test" type="NUnitTestElement" TypeName="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test" MethodName="And_invoice_request_invoice_row_sum_is_negative_an_exception_is_thrown" Project="5DB934E7-AB65-4D3C-B943-49C807A0D7FA" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test.And_invoice_request_invoice_row_sum_is_zero_an_exception_is_thrown" ParentId="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test" type="NUnitTestElement" TypeName="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test" MethodName="And_invoice_request_invoice_row_sum_is_zero_an_exception_is_thrown" Project="5DB934E7-AB65-4D3C-B943-49C807A0D7FA" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test.And_invoice_request_is_null_an_exception_is_thrown" ParentId="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test" type="NUnitTestElement" TypeName="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test" MethodName="And_invoice_request_is_null_an_exception_is_thrown" Project="5DB934E7-AB65-4D3C-B943-49C807A0D7FA" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_GetPaymentReservation_is_called_.AvailableReservationAmount_Is_Set" ParentId="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_GetPaymentReservation_is_called_" type="NUnitTestElement" TypeName="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_GetPaymentReservation_is_called_" MethodName="AvailableReservationAmount_Is_Set" Project="5DB934E7-AB65-4D3C-B943-49C807A0D7FA" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.Cancel_customer_comment_command_raises_event" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="Cancel_customer_comment_command_raises_event" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold.Cause_is_set" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" MethodName="Cause_is_set" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold.City_is_set" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" MethodName="City_is_set" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold.Civic_reg_no_is_set" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" MethodName="Civic_reg_no_is_set" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold.Client_ip_address_is_set" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" MethodName="Client_ip_address_is_set" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.Comments_With_Different_Partners_Are_Filtered_When_Setting_ShowSelectedCommitmentCommentsOnly" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="Comments_With_Different_Partners_Are_Filtered_When_Setting_ShowSelectedCommitmentCommentsOnly" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold.Country_code_is_set" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" MethodName="Country_code_is_set" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold.Created_on_is_set" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" MethodName="Created_on_is_set" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.Edit_customer_comment_command_raises_event" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="Edit_customer_comment_command_raises_event" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_A_Reservation_Is_Canceled_With_An_Invalid_Integration_Number.Exception_is_thrown" ParentId="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_A_Reservation_Is_Canceled_With_An_Invalid_Integration_Number" type="NUnitTestElement" TypeName="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_A_Reservation_Is_Canceled_With_An_Invalid_Integration_Number" MethodName="Exception_is_thrown" Project="5DB934E7-AB65-4D3C-B943-49C807A0D7FA" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold.First_name_is_set" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" MethodName="First_name_is_set" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold.Home_phone_is_set" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" MethodName="Home_phone_is_set" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold.Invoice_number_is_set" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" MethodName="Invoice_number_is_set" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold.Is_company_is_set" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" MethodName="Is_company_is_set" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold.Is_private_firm_is_set" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" MethodName="Is_private_firm_is_set" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test.It_should_disable_buttons_if_no_items_are_selected" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" MethodName="It_should_disable_buttons_if_no_items_are_selected" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold.Last_name_is_set" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" MethodName="Last_name_is_set" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold.Mobile_phone_is_set" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" MethodName="Mobile_phone_is_set" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold.Order_id_is_set" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" MethodName="Order_id_is_set" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold.partner_id_is_set" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" MethodName="partner_id_is_set" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold.Partner_name_is_set" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" MethodName="Partner_name_is_set" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_GetPaymentReservation_is_called_.PendingUntil_Is_Set" ParentId="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_GetPaymentReservation_is_called_" type="NUnitTestElement" TypeName="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_GetPaymentReservation_is_called_" MethodName="PendingUntil_Is_Set" Project="5DB934E7-AB65-4D3C-B943-49C807A0D7FA" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold.Postal_code_is_set" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" MethodName="Postal_code_is_set" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.Reject_invoice_command_raises_event" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="Reject_invoice_command_raises_event" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.Reject_invoice_process_is_called_with_invoice_number" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="Reject_invoice_process_is_called_with_invoice_number" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.Reject_invoice_process_is_called_with_partner_id" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="Reject_invoice_process_is_called_with_partner_id" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.Reject_invoice_process_is_called_with_user_name" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="Reject_invoice_process_is_called_with_user_name" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.Release_invoice_calls_process_with_correct_data" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="Release_invoice_calls_process_with_correct_data" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_A_Valid_Reservation_Is_Activated.Reservation_Response_Has_Correct_Values" ParentId="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_A_Valid_Reservation_Is_Activated" type="NUnitTestElement" TypeName="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_A_Valid_Reservation_Is_Activated" MethodName="Reservation_Response_Has_Correct_Values" Project="5DB934E7-AB65-4D3C-B943-49C807A0D7FA" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_GetPaymentReservation_is_called_.ReservedAmount_Is_Set" ParentId="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_GetPaymentReservation_is_called_" type="NUnitTestElement" TypeName="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_GetPaymentReservation_is_called_" MethodName="ReservedAmount_Is_Set" Project="5DB934E7-AB65-4D3C-B943-49C807A0D7FA" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.Save_comment_command_creates_comment_with_correct_text" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="Save_comment_command_creates_comment_with_correct_text" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.Save_comment_command_with_selected_comment_updates_comment_with_correct_text" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="Save_comment_command_with_selected_comment_updates_comment_with_correct_text" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.Save_comment_command_with_selected_comment_updates_comment_with_correct_updated_on" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="Save_comment_command_with_selected_comment_updates_comment_with_correct_updated_on" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.Save_comment_when_a_comment_is_selected_but_should_not_be_assiociated_with_partner" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="Save_comment_when_a_comment_is_selected_but_should_not_be_assiociated_with_partner" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.Save_comment_with_selected_comment_and_assiociate_with_partner_updates_comment_partner" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="Save_comment_with_selected_comment_and_assiociate_with_partner_updates_comment_partner" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.Save_customer_comment_command_raises_event" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="Save_customer_comment_command_raises_event" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_GetPaymentReservation_is_called_.Status_Is_Set" ParentId="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_GetPaymentReservation_is_called_" type="NUnitTestElement" TypeName="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_GetPaymentReservation_is_called_" MethodName="Status_Is_Set" Project="5DB934E7-AB65-4D3C-B943-49C807A0D7FA" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_comments_have_correct_created_by" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_comments_have_correct_created_by" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_comments_have_correct_created_on" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_comments_have_correct_created_on" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_comments_have_correct_text" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_comments_have_correct_text" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_comments_have_correct_updated_by" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_comments_have_correct_updated_by" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_comments_have_correct_updated_on" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_comments_have_correct_updated_on" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_commitments_have_correct_number_of_items" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_commitments_have_correct_number_of_items" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_commitments_have_correct_partner_name" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_commitments_have_correct_partner_name" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_commitments_have_correct_total_debt" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_commitments_have_correct_total_debt" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_credit_check_results_have_correct_amount" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_credit_check_results_have_correct_amount" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_credit_check_results_have_correct_cause" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_credit_check_results_have_correct_cause" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_credit_check_results_have_correct_checked_date" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_credit_check_results_have_correct_checked_date" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_credit_check_results_have_correct_client_ip_adress" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_credit_check_results_have_correct_client_ip_adress" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_credit_check_results_have_correct_is_approved" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_credit_check_results_have_correct_is_approved" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_credit_check_results_have_correct_partner_partner_name" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_credit_check_results_have_correct_partner_partner_name" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_customer_info_have_correct_address1" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_customer_info_have_correct_address1" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_customer_info_have_correct_address2" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_customer_info_have_correct_address2" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_customer_info_have_correct_cause" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_customer_info_have_correct_cause" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_customer_info_have_correct_city" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_customer_info_have_correct_city" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_customer_info_have_correct_client_ip_address" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_customer_info_have_correct_client_ip_address" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_customer_info_have_correct_co_address" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_customer_info_have_correct_co_address" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_customer_info_have_correct_country" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_customer_info_have_correct_country" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_customer_info_have_correct_date_of_birth" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_customer_info_have_correct_date_of_birth" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_customer_info_have_correct_email" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_customer_info_have_correct_email" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_customer_info_have_correct_first_name" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_customer_info_have_correct_first_name" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_customer_info_have_correct_home_nr" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_customer_info_have_correct_home_nr" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_customer_info_have_correct_last_name" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_customer_info_have_correct_last_name" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_customer_info_have_correct_mobile_nr" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_customer_info_have_correct_mobile_nr" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_customer_info_have_correct_number_of_credit_checks" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_customer_info_have_correct_number_of_credit_checks" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_customer_info_have_correct_partner_name" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_customer_info_have_correct_partner_name" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_customer_info_have_correct_postal_code" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_customer_info_have_correct_postal_code" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_customer_info_have_correct_registration_number" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_customer_info_have_correct_registration_number" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_order_rows_have_correct_article_description" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_order_rows_have_correct_article_description" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_order_rows_have_correct_article_no" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_order_rows_have_correct_article_no" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_order_rows_have_correct_number_of_items" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_order_rows_have_correct_number_of_items" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_order_rows_have_correct_quantity" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_order_rows_have_correct_quantity" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_order_rows_have_correct_total_amount" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_order_rows_have_correct_total_amount" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_order_rows_have_correct_unit_price" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_order_rows_have_correct_unit_price" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_orders_have_correct_account_type" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_orders_have_correct_account_type" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_orders_have_correct_created_by" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_orders_have_correct_created_by" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_orders_have_correct_created_on" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_orders_have_correct_created_on" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_orders_have_correct_currency" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_orders_have_correct_currency" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_orders_have_correct_direct_invoice_no" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_orders_have_correct_direct_invoice_no" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_orders_have_correct_order_date" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_orders_have_correct_order_date" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_orders_have_correct_order_no" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_orders_have_correct_order_no" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_orders_have_correct_total_amount" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_orders_have_correct_total_amount" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.The_orders_have_correct_valid_until" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="The_orders_have_correct_valid_until" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_A_Valid_Reservation_Is_Activated.There_Will_Be_A_Response" ParentId="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_A_Valid_Reservation_Is_Activated" type="NUnitTestElement" TypeName="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_A_Valid_Reservation_Is_Activated" MethodName="There_Will_Be_A_Response" Project="5DB934E7-AB65-4D3C-B943-49C807A0D7FA" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_A_Valid_Reservation_Is_Canceled.There_Will_Be_A_Response" ParentId="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_A_Valid_Reservation_Is_Canceled" type="NUnitTestElement" TypeName="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_A_Valid_Reservation_Is_Canceled" MethodName="There_Will_Be_A_Response" Project="5DB934E7-AB65-4D3C-B943-49C807A0D7FA" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold.Total_amount_is_set" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test+When_listing_invoices_on_hold" MethodName="Total_amount_is_set" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_GetPaymentReservation_is_called_.ValidUntil_Is_Set_To_Null" ParentId="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_GetPaymentReservation_is_called_" type="NUnitTestElement" TypeName="Collector.Edge.ECommerce.WebService30.UnitTest.PaymentService.PaymentService_Test+When_GetPaymentReservation_is_called_" MethodName="ValidUntil_Is_Set_To_Null" Project="5DB934E7-AB65-4D3C-B943-49C807A0D7FA" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.Factories.AddInvoiceDtoFactory_Test.When_adding_an_invoice_with_known_purchase_types" ParentId="Collector.Edge.ECommerce.WebService30.UnitTest.Factories.AddInvoiceDtoFactory_Test" type="NUnitTestElement" TypeName="Collector.Edge.ECommerce.WebService30.UnitTest.Factories.AddInvoiceDtoFactory_Test" MethodName="When_adding_an_invoice_with_known_purchase_types" Project="5DB934E7-AB65-4D3C-B943-49C807A0D7FA" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.Factories.AddInvoiceDtoFactory_Test.When_adding_an_invoice_with_unknown_purchase_type_an_exception_is_thrown" ParentId="Collector.Edge.ECommerce.WebService30.UnitTest.Factories.AddInvoiceDtoFactory_Test" type="NUnitTestElement" TypeName="Collector.Edge.ECommerce.WebService30.UnitTest.Factories.AddInvoiceDtoFactory_Test" MethodName="When_adding_an_invoice_with_unknown_purchase_type_an_exception_is_thrown" Project="5DB934E7-AB65-4D3C-B943-49C807A0D7FA" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test.When_clearing_the_invoice_list_is_emptied" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" MethodName="When_clearing_the_invoice_list_is_emptied" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test.When_clearing_the_partner_name_is_reset" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" MethodName="When_clearing_the_partner_name_is_reset" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test.When_clearing_the_selected_country_name_is_reset" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" MethodName="When_clearing_the_selected_country_name_is_reset" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test.When_clearing_the_selected_item_is_reset" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" MethodName="When_clearing_the_selected_item_is_reset" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test.When_clearing_the_start_date_name_is_reset" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" MethodName="When_clearing_the_start_date_name_is_reset" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test.When_reject_process_throws_an_exception_it_raises_error" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" MethodName="When_reject_process_throws_an_exception_it_raises_error" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.When_reject_process_throws_an_exception_it_raises_error" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="When_reject_process_throws_an_exception_it_raises_error" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test.When_rejecting_invoices_the_confirm_dialogue_is_closed" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" MethodName="When_rejecting_invoices_the_confirm_dialogue_is_closed" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test.When_rejecting_invoices_the_rejected_invoice_is_removed_from_the_listing" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" MethodName="When_rejecting_invoices_the_rejected_invoice_is_removed_from_the_listing" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test.When_rejecting_invoices_the_selected_invoices_are_cleared" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" MethodName="When_rejecting_invoices_the_selected_invoices_are_cleared" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test.When_release_process_throws_an_exception_it_raises_error" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" MethodName="When_release_process_throws_an_exception_it_raises_error" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.When_release_process_throws_an_exception_it_raises_error" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="When_release_process_throws_an_exception_it_raises_error" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.When_releasing_invoice_the_confirm_dialogue_is_closed" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="When_releasing_invoice_the_confirm_dialogue_is_closed" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test.When_releasing_invoice_the_status_changed_event_is_raised" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.Details.SurveillanceListDetailsViewModel_Test" MethodName="When_releasing_invoice_the_status_changed_event_is_raised" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test.When_releasing_invoices_the_confirm_dialogue_is_closed" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" MethodName="When_releasing_invoices_the_confirm_dialogue_is_closed" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test.When_releasing_invoices_the_released_invoice_is_removed_from_the_listing" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" MethodName="When_releasing_invoices_the_released_invoice_is_removed_from_the_listing" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test.When_releasing_invoices_the_selected_invoice_is_cleared" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" MethodName="When_releasing_invoices_the_selected_invoice_is_cleared" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test.When_removing_an_item_if_it_is_not_the_selected_item_it_will_not_reset_selected" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" MethodName="When_removing_an_item_if_it_is_not_the_selected_item_it_will_not_reset_selected" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test.When_removing_an_item_if_it_is_the_selected_item_it_will_reset_selected" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" MethodName="When_removing_an_item_if_it_is_the_selected_item_it_will_reset_selected" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test.When_removing_an_item_the_item_is_removed_from_the_listing" ParentId="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" type="NUnitTestElement" TypeName="Collector.Edge.Client.ViewModel.UnitTest.FraudSurveillance.List.FraudSurveillanceListViewModel_Test" MethodName="When_removing_an_item_the_item_is_removed_from_the_listing" Project="30F2BA82-2525-4A89-9215-3F8F8A706DBB" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.Factories.AddInvoiceDtoFactory_Test.When_adding_an_invoice_with_known_purchase_types(0,Ecommerce)" ParentId="Collector.Edge.ECommerce.WebService30.UnitTest.Factories.AddInvoiceDtoFactory_Test.When_adding_an_invoice_with_known_purchase_types" type="NUnitRowTestElement" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.Factories.AddInvoiceDtoFactory_Test.When_adding_an_invoice_with_known_purchase_types(1,InStore)" ParentId="Collector.Edge.ECommerce.WebService30.UnitTest.Factories.AddInvoiceDtoFactory_Test.When_adding_an_invoice_with_known_purchase_types" type="NUnitRowTestElement" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.Factories.AddInvoiceDtoFactory_Test.When_adding_an_invoice_with_known_purchase_types(2,InvoicePayment)" ParentId="Collector.Edge.ECommerce.WebService30.UnitTest.Factories.AddInvoiceDtoFactory_Test.When_adding_an_invoice_with_known_purchase_types" type="NUnitRowTestElement" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.Factories.AddInvoiceDtoFactory_Test.When_adding_an_invoice_with_known_purchase_types(3,P2P)" ParentId="Collector.Edge.ECommerce.WebService30.UnitTest.Factories.AddInvoiceDtoFactory_Test.When_adding_an_invoice_with_known_purchase_types" type="NUnitRowTestElement" /&gt;&lt;UnitTestElement Provider="nUnit" Id="Collector.Edge.ECommerce.WebService30.UnitTest.Factories.AddInvoiceDtoFactory_Test.When_adding_an_invoice_with_known_purchase_types(null,null)" ParentId="Collector.Edge.ECommerce.WebService30.UnitTest.Factories.AddInvoiceDtoFactory_Test.When_adding_an_invoice_with_known_purchase_types" type="NUnitRowTestElement" /&gt;&lt;/Elements&gt;&lt;/Session&gt;</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Categories/=Imported_00202013_002D11_002D07/@EntryIndexedValue">Imported 2013-11-07</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/CustomProperties/=Extension/@EntryIndexedValue">cs</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/CustomProperties/=FileName/@EntryIndexedValue">Class</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/CustomProperties/=ValidateFileName/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Description/@EntryValue">Class with Interface</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Field/=CLASS_005FHEADER/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Field/=CLASS_005FHEADER/Expression/@EntryValue">fileheader()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Field/=CLASS_005FHEADER/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Field/=CLASS_005FHEADER/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Field/=CLASS_005FNAME/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Field/=CLASS_005FNAME/Expression/@EntryValue">getFileNameWithoutExtension()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Field/=CLASS_005FNAME/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Field/=CLASS_005FNAME/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Field/=CLASS_005FNAMESPACE/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Field/=CLASS_005FNAMESPACE/Expression/@EntryValue">fileDefaultNamespace()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Field/=CLASS_005FNAMESPACE/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Field/=CLASS_005FNAMESPACE/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Field/=INTERFACE_005FHEADER/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Field/=INTERFACE_005FHEADER/Expression/@EntryValue">fileheader()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Field/=INTERFACE_005FHEADER/InitialRange/@EntryValue">-1</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Field/=INTERFACE_005FHEADER/InitialSection/@EntryValue">4BAD06A2935BB74F9EA6FF8B6CBB86BC</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Field/=INTERFACE_005FHEADER/Order/@EntryValue">3</s:Int64>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Scope/=E8F0594528C33E45BBFEC6CFE851095D/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Scope/=E8F0594528C33E45BBFEC6CFE851095D/Type/@EntryValue">InCSharpProjectFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Section/=4BAD06A2935BB74F9EA6FF8B6CBB86BC/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Section/=4BAD06A2935BB74F9EA6FF8B6CBB86BC/LocationSelectorConfig/@EntryValue">&lt;RelativeConfig Folder="Interfaces" File="I$NAME$.cs" /&gt;</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Section/=4BAD06A2935BB74F9EA6FF8B6CBB86BC/LocationSelectorName/@EntryValue">manual</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Section/=4BAD06A2935BB74F9EA6FF8B6CBB86BC/Order/@EntryValue">0</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Section/=4BAD06A2935BB74F9EA6FF8B6CBB86BC/SectionPlain/Text/@EntryValue">$INTERFACE_HEADER$&#xD;
+namespace $CLASS_NAMESPACE$.Interfaces&#xD;
+{&#xD;
+  public interface I$CLASS_NAME$ {$END$}&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=084739D90D53574A9248350A35AAB865/Text/@EntryValue">$CLASS_HEADER$&#xD;
+namespace $CLASS_NAMESPACE$&#xD;
+{&#xD;
+  public class $CLASS_NAME$ : I$CLASS_NAME$ {$END$}&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/CustomProperties/=Extension/@EntryIndexedValue">cs</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/CustomProperties/=FileName/@EntryIndexedValue">Class</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/CustomProperties/=ValidateFileName/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Description/@EntryValue">Class with Map</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Field/=MAP_005FNAME/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Field/=MAP_005FNAME/Expression/@EntryValue">getFileNameWithoutExtension()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Field/=MAP_005FNAME/InitialRange/@EntryValue">-1</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Field/=MAP_005FNAME/InitialSection/@EntryValue">CE6EAADE7182C6419603D3D579489179</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Field/=MAP_005FNAME/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Field/=MAP_005FNAMESPACE/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Field/=MAP_005FNAMESPACE/Expression/@EntryValue">fileDefaultNamespace()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Field/=MAP_005FNAMESPACE/InitialRange/@EntryValue">-1</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Field/=MAP_005FNAMESPACE/InitialSection/@EntryValue">CE6EAADE7182C6419603D3D579489179</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Field/=MAP_005FNAMESPACE/Order/@EntryValue">3</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Field/=MODEL_005FNAME/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Field/=MODEL_005FNAME/Expression/@EntryValue">getFileNameWithoutExtension()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Field/=MODEL_005FNAME/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Field/=MODEL_005FNAME/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Field/=MODEL_005FNAMESPACE/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Field/=MODEL_005FNAMESPACE/Expression/@EntryValue">fileDefaultNamespace()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Field/=MODEL_005FNAMESPACE/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Field/=MODEL_005FNAMESPACE/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Field/=MODEL_005FSUMMARY/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Field/=MODEL_005FSUMMARY/Order/@EntryValue">4</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Scope/=E8F0594528C33E45BBFEC6CFE851095D/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Scope/=E8F0594528C33E45BBFEC6CFE851095D/Type/@EntryValue">InCSharpProjectFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Section/=CE6EAADE7182C6419603D3D579489179/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Section/=CE6EAADE7182C6419603D3D579489179/LocationSelectorConfig/@EntryValue">&lt;RelativeConfig Project="$PROJECT$" Folder="$RELPATH$\Mapping" File="$NAME$Map.cs" /&gt;</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Section/=CE6EAADE7182C6419603D3D579489179/LocationSelectorName/@EntryValue">manual</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Section/=CE6EAADE7182C6419603D3D579489179/Order/@EntryValue">0</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Section/=CE6EAADE7182C6419603D3D579489179/SectionPlain/Text/@EntryValue">// --------------------------------------------------------------------------------------------------------------------&#xD;
+// &lt;copyright file="$MAP_NAME$.cs" company="Collector AB"&gt;&#xD;
+//   Copyright © Collector AB. All rights reserved.&#xD;
+// &lt;/copyright&gt;&#xD;
+// --------------------------------------------------------------------------------------------------------------------&#xD;
+namespace $MAP_NAMESPACE$&#xD;
+{&#xD;
+  using $MODEL_NAMESPACE$;&#xD;
+&#xD;
+  using FluentNHibernate.Mapping;&#xD;
+&#xD;
+  /// &lt;summary&gt;&#xD;
+  /// Fluent NHibernate mapping for $MODEL_NAME$.&#xD;
+  /// &lt;/summary&gt;&#xD;
+  public class $MAP_NAME$ : ClassMap&lt;$MODEL_NAME$&gt;&#xD;
+  {&#xD;
+    /// &lt;summary&gt;&#xD;
+    /// Initializes a new instance of the &lt;see cref="$MAP_NAME$" /&gt; class.&#xD;
+    /// &lt;/summary&gt;&#xD;
+    public $MAP_NAME$()&#xD;
+    {&#xD;
+    }&#xD;
+  }&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24D9FDF33949224A8DD9190319F9C7E8/Text/@EntryValue">// --------------------------------------------------------------------------------------------------------------------&#xD;
+// &lt;copyright file="$MODEL_NAME$.cs" company="Collector AB"&gt;&#xD;
+//   Copyright © Collector AB. All rights reserved.&#xD;
+// &lt;/copyright&gt;&#xD;
+// --------------------------------------------------------------------------------------------------------------------&#xD;
+&#xD;
+namespace $MODEL_NAMESPACE$&#xD;
+{&#xD;
+  /// &lt;summary&gt;&#xD;
+  /// $MODEL_SUMMARY$&#xD;
+  /// &lt;/summary&gt;&#xD;
+  public class $MODEL_NAME$&#xD;
+  {&#xD;
+  }&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42FA57A3531FAB448512FF6606E13354/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42FA57A3531FAB448512FF6606E13354/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42FA57A3531FAB448512FF6606E13354/Description/@EntryValue">Test method</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42FA57A3531FAB448512FF6606E13354/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42FA57A3531FAB448512FF6606E13354/Scope/=C3001E7C0DA78E4487072B7E050D86C5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42FA57A3531FAB448512FF6606E13354/Scope/=C3001E7C0DA78E4487072B7E050D86C5/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">2.0</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42FA57A3531FAB448512FF6606E13354/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42FA57A3531FAB448512FF6606E13354/Shortcut/@EntryValue">tm</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42FA57A3531FAB448512FF6606E13354/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42FA57A3531FAB448512FF6606E13354/Text/@EntryValue">[Test]&#xD;
+public void $END$()&#xD;
+{&#xD;
+&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=55F060E7E8172E419614F57BCCB0B91E/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=55F060E7E8172E419614F57BCCB0B91E/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=55F060E7E8172E419614F57BCCB0B91E/CustomProperties/=Extension/@EntryIndexedValue">txt</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=55F060E7E8172E419614F57BCCB0B91E/CustomProperties/=FileName/@EntryIndexedValue">ValueObject</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=55F060E7E8172E419614F57BCCB0B91E/CustomProperties/=ValidateFileName/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=55F060E7E8172E419614F57BCCB0B91E/Description/@EntryValue">Value Object</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=55F060E7E8172E419614F57BCCB0B91E/Field/=CLASS_005FNAME/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=55F060E7E8172E419614F57BCCB0B91E/Field/=CLASS_005FNAME/Expression/@EntryValue">getFileNameWithoutExtension()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=55F060E7E8172E419614F57BCCB0B91E/Field/=CLASS_005FNAME/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=55F060E7E8172E419614F57BCCB0B91E/Field/=CLASS_005FNAME/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=55F060E7E8172E419614F57BCCB0B91E/Field/=HEADER/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=55F060E7E8172E419614F57BCCB0B91E/Field/=HEADER/Expression/@EntryValue">fileheader()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=55F060E7E8172E419614F57BCCB0B91E/Field/=HEADER/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=55F060E7E8172E419614F57BCCB0B91E/Field/=HEADER/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=55F060E7E8172E419614F57BCCB0B91E/Field/=NAMESPACE/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=55F060E7E8172E419614F57BCCB0B91E/Field/=NAMESPACE/Expression/@EntryValue">fileDefaultNamespace()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=55F060E7E8172E419614F57BCCB0B91E/Field/=NAMESPACE/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=55F060E7E8172E419614F57BCCB0B91E/Field/=NAMESPACE/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=55F060E7E8172E419614F57BCCB0B91E/Field/=PARAMETER_005FNAME/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=55F060E7E8172E419614F57BCCB0B91E/Field/=PARAMETER_005FNAME/Expression/@EntryValue">getFileNameWithoutExtension()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=55F060E7E8172E419614F57BCCB0B91E/Field/=PARAMETER_005FNAME/Order/@EntryValue">3</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=55F060E7E8172E419614F57BCCB0B91E/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=55F060E7E8172E419614F57BCCB0B91E/Scope/=E8F0594528C33E45BBFEC6CFE851095D/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=55F060E7E8172E419614F57BCCB0B91E/Scope/=E8F0594528C33E45BBFEC6CFE851095D/Type/@EntryValue">InCSharpProjectFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=55F060E7E8172E419614F57BCCB0B91E/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=55F060E7E8172E419614F57BCCB0B91E/Text/@EntryValue">$HEADER$&#xD;
+&#xD;
+namespace $NAMESPACE$&#xD;
+{&#xD;
+  using System;&#xD;
+&#xD;
+  using Collector.Edge.Infrastructure.Base.Types&#xD;
+&#xD;
+  public class $CLASS_NAME$ : ValueObject&lt;$CLASS_NAME$&gt;&#xD;
+  {&#xD;
+    protected $CLASS_NAME$&#xD;
+    {&#xD;
+    }&#xD;
+&#xD;
+  private $CLASS_NAME$(string $PARAMETER_NAME$)&#xD;
+  {&#xD;
+    if (string.IsNullOrWhiteSpace($PARAMETER_NAME$)&#xD;
+      throw new ArgumentException($PARAMETER_NAME$)&#xD;
+  &#xD;
+    Value = $PARAMETER_NAME$&#xD;
+  }&#xD;
+  &#xD;
+  [ValueObjectKey]&#xD;
+  public string Value {get; protected set; }&#xD;
+  &#xD;
+  public static $CLASS_NAME$ Create(string $PARAMETER_NAME$)&#xD;
+  {&#xD;
+    return !string.IsNullOrWhiteSpace($PARAMETER_NAME$) ? new $CLASS_NAME$($PARAMETER_NAME$) : null;&#xD;
+  }&#xD;
+  &#xD;
+  public static implicit operator string($CLASS_NAME$ $PARAMETER_NAME$)&#xD;
+  {&#xD;
+    return $PARAMETER_NAME$ == null&#xD;
+        ? null&#xD;
+        : $PARAMETER_NAME$.Value;&#xD;
+  }&#xD;
+&#xD;
+    public override string ToString()&#xD;
+    {&#xD;
+        return Value;&#xD;
+    }&#xD;
+  }&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=73978606F054DE4691CD0B004DDC40EA/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=73978606F054DE4691CD0B004DDC40EA/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=73978606F054DE4691CD0B004DDC40EA/CustomProperties/=Extension/@EntryIndexedValue">cs</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=73978606F054DE4691CD0B004DDC40EA/CustomProperties/=FileName/@EntryIndexedValue">TestClass</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=73978606F054DE4691CD0B004DDC40EA/CustomProperties/=ValidateFileName/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=73978606F054DE4691CD0B004DDC40EA/Description/@EntryValue">UnitTest Class</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=73978606F054DE4691CD0B004DDC40EA/Field/=CLASS_005FHEADER/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=73978606F054DE4691CD0B004DDC40EA/Field/=CLASS_005FHEADER/Expression/@EntryValue">fileheader()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=73978606F054DE4691CD0B004DDC40EA/Field/=CLASS_005FHEADER/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=73978606F054DE4691CD0B004DDC40EA/Field/=CLASS_005FHEADER/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=73978606F054DE4691CD0B004DDC40EA/Field/=CLASS_005FNAME/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=73978606F054DE4691CD0B004DDC40EA/Field/=CLASS_005FNAME/Expression/@EntryValue">getFileNameWithoutExtension()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=73978606F054DE4691CD0B004DDC40EA/Field/=CLASS_005FNAME/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=73978606F054DE4691CD0B004DDC40EA/Field/=CLASS_005FNAME/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=73978606F054DE4691CD0B004DDC40EA/Field/=CLASS_005FNAMESPACE/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=73978606F054DE4691CD0B004DDC40EA/Field/=CLASS_005FNAMESPACE/Expression/@EntryValue">fileDefaultNamespace()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=73978606F054DE4691CD0B004DDC40EA/Field/=CLASS_005FNAMESPACE/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=73978606F054DE4691CD0B004DDC40EA/Field/=CLASS_005FNAMESPACE/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=73978606F054DE4691CD0B004DDC40EA/Field/=CLASS_005FUNDER_005FTEST/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=73978606F054DE4691CD0B004DDC40EA/Field/=CLASS_005FUNDER_005FTEST/Expression/@EntryValue">getFileNameWithoutExtension()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=73978606F054DE4691CD0B004DDC40EA/Field/=CLASS_005FUNDER_005FTEST/Order/@EntryValue">3</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=73978606F054DE4691CD0B004DDC40EA/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=73978606F054DE4691CD0B004DDC40EA/Scope/=E8F0594528C33E45BBFEC6CFE851095D/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=73978606F054DE4691CD0B004DDC40EA/Scope/=E8F0594528C33E45BBFEC6CFE851095D/Type/@EntryValue">InCSharpProjectFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=73978606F054DE4691CD0B004DDC40EA/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=73978606F054DE4691CD0B004DDC40EA/Text/@EntryValue">$CLASS_HEADER$&#xD;
+namespace $CLASS_NAMESPACE$&#xD;
+{&#xD;
+  using NUnit.Framework;&#xD;
+&#xD;
+  [TestFixture]&#xD;
+  public class $CLASS_NAME$ : BaseUnitTest&#xD;
+  {&#xD;
+    private static $CLASS_UNDER_TEST$ Create$CLASS_UNDER_TEST$()&#xD;
+    {&#xD;
+      return new $CLASS_UNDER_TEST$();&#xD;
+    }&#xD;
+  }&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8A23CF57B077A9409A22BFAAA02B557B/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8A23CF57B077A9409A22BFAAA02B557B/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8A23CF57B077A9409A22BFAAA02B557B/CustomProperties/=Extension/@EntryIndexedValue">cs</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8A23CF57B077A9409A22BFAAA02B557B/CustomProperties/=FileName/@EntryIndexedValue">Specification</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8A23CF57B077A9409A22BFAAA02B557B/CustomProperties/=ValidateFileName/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8A23CF57B077A9409A22BFAAA02B557B/Description/@EntryValue">Specification</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8A23CF57B077A9409A22BFAAA02B557B/Field/=CLASS_005FHEADER/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8A23CF57B077A9409A22BFAAA02B557B/Field/=CLASS_005FHEADER/Expression/@EntryValue">fileheader()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8A23CF57B077A9409A22BFAAA02B557B/Field/=CLASS_005FHEADER/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8A23CF57B077A9409A22BFAAA02B557B/Field/=CLASS_005FHEADER/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8A23CF57B077A9409A22BFAAA02B557B/Field/=CLASS_005FNAME/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8A23CF57B077A9409A22BFAAA02B557B/Field/=CLASS_005FNAME/Expression/@EntryValue">getFileNameWithoutExtension()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8A23CF57B077A9409A22BFAAA02B557B/Field/=CLASS_005FNAME/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8A23CF57B077A9409A22BFAAA02B557B/Field/=CLASS_005FNAME/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8A23CF57B077A9409A22BFAAA02B557B/Field/=CLASS_005FNAMESPACE/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8A23CF57B077A9409A22BFAAA02B557B/Field/=CLASS_005FNAMESPACE/Expression/@EntryValue">fileDefaultNamespace()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8A23CF57B077A9409A22BFAAA02B557B/Field/=CLASS_005FNAMESPACE/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8A23CF57B077A9409A22BFAAA02B557B/Field/=CLASS_005FNAMESPACE/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8A23CF57B077A9409A22BFAAA02B557B/Field/=QUERY_005FTARGET/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8A23CF57B077A9409A22BFAAA02B557B/Field/=QUERY_005FTARGET/Order/@EntryValue">3</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8A23CF57B077A9409A22BFAAA02B557B/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8A23CF57B077A9409A22BFAAA02B557B/Scope/=E8F0594528C33E45BBFEC6CFE851095D/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8A23CF57B077A9409A22BFAAA02B557B/Scope/=E8F0594528C33E45BBFEC6CFE851095D/Type/@EntryValue">InCSharpProjectFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8A23CF57B077A9409A22BFAAA02B557B/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=8A23CF57B077A9409A22BFAAA02B557B/Text/@EntryValue">$CLASS_HEADER$&#xD;
+namespace $CLASS_NAMESPACE$&#xD;
+{&#xD;
+  using System.Linq;&#xD;
+&#xD;
+  using NHibernate;&#xD;
+  using NHibernate.Linq;&#xD;
+&#xD;
+  internal sealed class $CLASS_NAME$ : QuerySpecification&lt;$QUERY_TARGET$&gt;&#xD;
+  {&#xD;
+    public $CLASS_NAME$()&#xD;
+    {&#xD;
+    } &#xD;
+&#xD;
+    public override IQueryable&lt;$QUERY_TARGET$&gt; CreateQuery(ISession session)&#xD;
+    {&#xD;
+      return session.Query&lt;$QUERY_TARGET$&gt;();&#xD;
+    }&#xD;
+  }&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932869/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932869/Comment/@EntryValue">SystemTimeOffset.UtcNow should be used</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932869/IsReplacePattern/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932869/LanguageName/@EntryValue">CSHARP</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932869/ReplacePattern/@EntryValue">SystemTimeOffset.UtcNow</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932869/SearchPattern/@EntryValue">DateTime.Now</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932869/Severity/@EntryValue">WARNING</s:String>
+
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932870/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932870/Comment/@EntryValue">SystemTimeOffset.UtcNow should be used</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932870/IsReplacePattern/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932870/LanguageName/@EntryValue">CSHARP</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932870/ReplacePattern/@EntryValue">SystemTimeOffset.UtcNow</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932870/SearchPattern/@EntryValue">DateTime.UtcNow</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932870/Severity/@EntryValue">WARNING</s:String>
+
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932871/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932871/Comment/@EntryValue">SystemTimeOffset.UtcNow should be used</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932871/IsReplacePattern/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932871/LanguageName/@EntryValue">CSHARP</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932871/ReplacePattern/@EntryValue">SystemTimeOffset.UtcNow</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932871/SearchPattern/@EntryValue">DateTimeOffset.Now</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932871/Severity/@EntryValue">WARNING</s:String>
+
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932872/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932872/Comment/@EntryValue">SystemTimeOffset.UtcNow should be used</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932872/IsReplacePattern/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932872/LanguageName/@EntryValue">CSHARP</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932872/ReplacePattern/@EntryValue">SystemTimeOffset.UtcNow</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932872/SearchPattern/@EntryValue">DateTimeOffset.UtcNow</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932872/Severity/@EntryValue">WARNING</s:String>
+
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932873/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932873/Comment/@EntryValue">DateTimeOffset should be used</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932873/IsReplacePattern/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932873/LanguageName/@EntryValue">CSHARP</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932873/ReplacePattern/@EntryValue">DateTimeOffset</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932873/SearchPattern/@EntryValue">DateTime</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=537ED01E8E894146ABD52E2B75932873/Severity/@EntryValue">WARNING</s:String>
+
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=9B08157E3AE5B14C9FD0AC93EDC1C273/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=9B08157E3AE5B14C9FD0AC93EDC1C273/Comment/@EntryValue">SystemTime.Now should be used instead of DateTime.Now</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=9B08157E3AE5B14C9FD0AC93EDC1C273/IsReplacePattern/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=9B08157E3AE5B14C9FD0AC93EDC1C273/LanguageName/@EntryValue">CSHARP</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=9B08157E3AE5B14C9FD0AC93EDC1C273/ReplacePattern/@EntryValue">SystemTime.Now</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=9B08157E3AE5B14C9FD0AC93EDC1C273/SearchPattern/@EntryValue">DateTime.Now</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/StructuralSearch/Pattern/=9B08157E3AE5B14C9FD0AC93EDC1C273/Severity/@EntryValue">WARNING</s:String>
+	
+	</wpf:ResourceDictionary>

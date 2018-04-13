@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EBCCC004-FB3E-4B07-AE64-485556625982}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D1C91DA6-FD21-4849-BB64-B42E69716E37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collector.Serilog.SensitiveInformation", "src\Collector.Serilog.SensitiveInformation\Collector.Serilog.SensitiveInformation.csproj", "{DC5013F1-9908-4A3E-80F7-B54791CB5565}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC5013F1-9908-4A3E-80F7-B54791CB5565}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC5013F1-9908-4A3E-80F7-B54791CB5565}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC5013F1-9908-4A3E-80F7-B54791CB5565}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC5013F1-9908-4A3E-80F7-B54791CB5565}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DC5013F1-9908-4A3E-80F7-B54791CB5565} = {EBCCC004-FB3E-4B07-AE64-485556625982}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7EF95CE7-B2E2-4CB2-9DE2-2B53CDFA0E4E}
+	EndGlobalSection
+EndGlobal
