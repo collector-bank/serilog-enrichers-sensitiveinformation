@@ -4,4 +4,13 @@
     <TargetFrameworks>netstandard1.1;net45</TargetFrameworks>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Collector.Serilog.SensitiveInformation.net45.v3.ncrunchproject" />
+    <None Remove="Collector.Serilog.SensitiveInformation.netstandard1.1.v3.ncrunchproject" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Serilog" Version="2.6.0" />
+  </ItemGroup>
+
 </Project>
