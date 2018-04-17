@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Serilog.Core;
+using Serilog.Debugging;
 using Serilog.Events;
 
 namespace Collector.Serilog.SensitiveInformation
@@ -31,7 +32,7 @@ namespace Collector.Serilog.SensitiveInformation
                     logEvent.AddOrUpdateProperty(safeProperty);
             }
 
-            logEvent.AddPropertyIfAbsent(new LogEventProperty(SensitiveInformation, new StructureValue(sensitiveProperties)));
+            logEvent.AddOrUpdateProperty(new LogEventProperty(SensitiveInformation, new StructureValue(sensitiveProperties)));
         }
 
         public LogEventProperty CreateSensitiveProperty(string name, LogEventPropertyValue logEventPropertyValue)
@@ -120,7 +121,8 @@ namespace Collector.Serilog.SensitiveInformation
                 return values.Any() ? new StructureValue(values, typeTag: structureValue.TypeTag) : null;
             }
 
-            throw new NotImplementedException();
+            SelfLog.WriteLine("Unknown LogEventPropertyValue type: {0}", logEventPropertyValue.GetType());
+            return null;
         }
     }
 }

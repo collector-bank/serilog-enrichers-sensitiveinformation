@@ -18,7 +18,7 @@ namespace Collector.Serilog.SensitiveInformation.UnitTest.DestructuringPolicies
         {
             Sink = new JsonSink();
             Logger = new LoggerConfiguration()
-                .Destructure.AsSensitiveByTransforming<TestClass>(tc => tc.Prop1)
+                .Destructure.AsSensitiveByTransforming<TestClass>(tc => tc.Prop1 + tc.Prop2)
                 .Enrich.With<SensitiveInformationEnricher>()
                 .WriteTo.Sink(Sink)
                 .CreateLogger();
@@ -30,7 +30,7 @@ namespace Collector.Serilog.SensitiveInformation.UnitTest.DestructuringPolicies
             Logger.ForContext("ContextName", new TestClass(), destructureObjects: true)
                   .Information("Test");
 
-            Assert.Equal(@"{""__sensitiveInfo"":{""ContextName"":""Value1""}}", Sink.Properties);
+            Assert.Equal(@"{""__sensitiveInfo"":{""ContextName"":""Value1Value2""}}", Sink.Properties);
         }
 
         private class TestClass

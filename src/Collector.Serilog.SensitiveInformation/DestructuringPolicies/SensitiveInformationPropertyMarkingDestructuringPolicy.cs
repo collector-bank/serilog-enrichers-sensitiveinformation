@@ -25,7 +25,7 @@ namespace Collector.Serilog.SensitiveInformation.DestructuringPolicies
             {
                 var properties = value.GetType().GetAllProperties();
 
-                var dic = new Dictionary<ScalarValue, LogEventPropertyValue>();
+                var logEventProperties = new List<LogEventProperty>();
 
                 foreach (var propertyInfo in properties)
                 {
@@ -34,10 +34,10 @@ namespace Collector.Serilog.SensitiveInformation.DestructuringPolicies
                     if (_sensitiveProperties.Contains(propertyInfo.Name))
                         propValue = propValue.AsSensitive();
 
-                    dic[new ScalarValue(propertyInfo.Name)] = propValue;
+                    logEventProperties.Add(new LogEventProperty(propertyInfo.Name, propValue));
                 }
 
-                result = new DictionaryValue(dic);
+                result = new StructureValue(logEventProperties);
                 return true;
             }
 

@@ -5,7 +5,7 @@ namespace Collector.Serilog.SensitiveInformation.UnitTest
     public partial class SensitiveInformationEnricher_Test
     {
         [Fact]
-        public void When_an_anonimous_object_only_have_regular_information()
+        public void When_an_anonymous_object_only_have_regular_information()
         {
             Logger.ForContext("Anon", new { Regular = "RegularValue" }, destructureObjects: true)
                   .Information("Test");
@@ -14,7 +14,7 @@ namespace Collector.Serilog.SensitiveInformation.UnitTest
         }
 
         [Fact]
-        public void When_an_anonimous_object_only_have_sensitive_information()
+        public void When_an_anonymous_object_only_have_sensitive_information()
         {
             Logger.ForContext("Anon", new { Sensitive = new TestClass() }, destructureObjects: true)
                   .Information("Test");
@@ -23,7 +23,7 @@ namespace Collector.Serilog.SensitiveInformation.UnitTest
         }
 
         [Fact]
-        public void When_an_anonimous_object_have_both_sensitive_and_regular_information()
+        public void When_an_anonymous_object_have_both_sensitive_and_regular_information()
         {
             Logger.ForContext("Anon", new { Sensitive = new TestClass(), Regular = "RegularValue" }, destructureObjects: true)
                   .Information("Test");
