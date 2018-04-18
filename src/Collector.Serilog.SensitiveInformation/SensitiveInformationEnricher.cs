@@ -18,6 +18,12 @@ namespace Collector.Serilog.SensitiveInformation
 
         public SensitiveInformationEnricher(params string[] blacklistedPropertyNames)
         {
+            if (blacklistedPropertyNames == null)
+                throw new ArgumentNullException(nameof(blacklistedPropertyNames));
+
+            if(blacklistedPropertyNames.Contains(null))
+                throw new ArgumentException("Blacklist can not contain null entries", nameof(blacklistedPropertyNames));
+
             foreach (var sensitiveInformationType in Enum.GetValues(typeof(SensitiveInformationType)).OfType<SensitiveInformationType>())
             {
                 _blacklistedPropertyNames.Add(sensitiveInformationType.ToString());

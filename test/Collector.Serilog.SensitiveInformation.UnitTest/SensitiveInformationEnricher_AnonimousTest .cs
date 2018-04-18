@@ -52,10 +52,10 @@ namespace Collector.Serilog.SensitiveInformation.UnitTest
         [Fact]
         public void When_an_anonymous_object_have_a_blacklisted_property_name_then_only_those_properties_are_marked_as_sensitive()
         {
-            Logger.ForContext("Dic", new { Blacklisted = "Value", Regular = "RegularValue" }, destructureObjects: true)
+            Logger.ForContext("SomeName", new { Blacklisted = "Value", Regular = "RegularValue" }, destructureObjects: true)
                   .Information("Test");
 
-            Assert.Equal(@"{""Dic"":{""Regular"":""RegularValue""},""__sensitiveInfo"":{""Dic"":{""Blacklisted"":""Value""}}}", Sink.Properties);
+            Assert.Equal(@"{""SomeName"":{""Regular"":""RegularValue""},""__sensitiveInfo"":{""SomeName"":{""Blacklisted"":""Value""}}}", Sink.Properties);
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using Collector.Serilog.SensitiveInformation.UnitTest.Helpers;
+﻿using System;
+
+using Collector.Serilog.SensitiveInformation.UnitTest.Helpers;
 
 using Serilog;
 using Serilog.Core;
@@ -21,6 +23,18 @@ namespace Collector.Serilog.SensitiveInformation.UnitTest
                 .Enrich.With(new SensitiveInformationEnricher("Blacklisted"))
                 .WriteTo.Sink(Sink)
                 .CreateLogger();
+        }
+
+        [Fact]
+        public void The_blacklist_must_be_not_null()
+        {
+            Assert.Throws<ArgumentNullException>(() => new SensitiveInformationEnricher(null));
+        }
+
+        [Fact]
+        public void Blacklisted_elements_must_be_not_null()
+        {
+            Assert.Throws<ArgumentException>(() => new SensitiveInformationEnricher(null as string));
         }
 
         [Fact]

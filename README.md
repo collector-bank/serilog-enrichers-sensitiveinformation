@@ -2,7 +2,7 @@
 
 This repository includes the Serilog enricher SensitiveInformationEnricher, that will extract out and isolate all sensitive information in a log message.
 
-DISCLAMER: It is VERY important that you read to the very end of this readme if you intend to use this library, for it is at the end where you will learn how this will actually make us able to retain you log messages for longer than 3 months.
+DISCLAIMER: It is VERY important that you read to the very end of this readme if you intend to use this library, for it is at the end where you will learn how this will actually make us able to retain you log messages for longer than 3 months.
 
 ## Step 1 - Enricher
 
@@ -12,7 +12,7 @@ Add the enricher:
 var logger = new LoggerConfiguration()
   // Your other enrichers. Make sure the sensitive information enricher is configured LAST.
              .Enrich.With(new SensitiveInformationEnricher())
-    		.WriteTo....
+             .WriteTo....
              .CreateLogger();
 ```
 
@@ -22,9 +22,11 @@ Note: The constructor of the enricher can be given a list of blacklisted propert
 var logger = new LoggerConfiguration()
              .Enrich.With<HttpRequestClientHostIPEnricher>()
              .Enrich.With(new SensitiveInformationEnricher("HttpRequestClientHostIP"))
-    		.WriteTo....
+             .WriteTo....
              .CreateLogger();
 ```
+This blacklist is already pre-populated with all the values of the [SensitiveInformationType](https://github.com/collector-bank/serilog-enricher-sensitiveinformation/blob/master/src/Collector.Serilog.SensitiveInformation/SensitiveInformationType.cs) enum.
+
 ## Step 2 - Destructuring policies
 
 Add destructuring polices to mark information as sensitive. There are 3 ways to do this at the moment:
@@ -128,4 +130,4 @@ var apiClient = new ApiClientBuilder()
     .WithLogger(Log.Logger.MarkAsReviewedRegardingSensitiveInformation())
     .Build();
 ```
-DISCLAMER: Do note that doing this to third party libraries might be dangerous since they can change with newer versions. The safest packages to apply this to are packages which themselves depend on this package, and therefor they have taken responsibility themselves of marking things as sensitive.
+DISCLAIMER: Do note that doing this to third party libraries might be dangerous since they can change with newer versions. The safest packages to apply this to are packages which themselves depend on this package, and therefor they have taken responsibility themselves of marking things as sensitive.
