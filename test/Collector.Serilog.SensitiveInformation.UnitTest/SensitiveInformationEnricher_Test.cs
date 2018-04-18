@@ -18,7 +18,7 @@ namespace Collector.Serilog.SensitiveInformation.UnitTest
             Sink = new JsonSink();
             Logger = new LoggerConfiguration()
                 .Destructure.AsSensitiveByTransforming<TestClass>(tc => tc.Value)
-                .Enrich.With<SensitiveInformationEnricher>()
+                .Enrich.With(new SensitiveInformationEnricher("Blacklisted"))
                 .WriteTo.Sink(Sink)
                 .CreateLogger();
         }
@@ -49,6 +49,15 @@ namespace Collector.Serilog.SensitiveInformation.UnitTest
                   .Information("Test");
 
             Assert.Equal(@"{""__sensitiveInfo"":{""Sensitive"":""SensitiveValue""},""Regular"":""RegularValue""}", Sink.Properties);
+        }
+
+        [Fact]
+        public void When_a_property_name_is_blacklisted_then_is_is_marked_as_sensitive()
+        {
+            Logger.ForContext("Blacklisted", "Value")
+                  .Information("Test");
+
+            Assert.Equal(@"{""__sensitiveInfo"":{""Blacklisted"":""Value""}}", Sink.Properties);
         }
 
         private class TestClass

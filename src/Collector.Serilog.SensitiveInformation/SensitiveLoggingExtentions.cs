@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 
 using Collector.Serilog.SensitiveInformation.DestructuringPolicies;
+using Collector.Serilog.SensitiveInformation.Util;
 
 using Serilog;
 using Serilog.Configuration;
@@ -11,11 +12,9 @@ namespace Collector.Serilog.SensitiveInformation
 {
     public static class SensitiveLoggingExtentions
     {
-        internal const string SensitiveInformationHasBeenReviewed = SensitiveInformationEnricher.SensitiveInformation + "HasBeenReviewed";
-
-        public static ILogger HasBeenReviewedForSensitiveInformation(this ILogger logger)
+        public static ILogger MarkAsReviewedRegardingSensitiveInformation(this ILogger logger)
         {
-            return logger.ForContext(SensitiveInformationHasBeenReviewed, true);
+            return logger.ForContext(Constants.SensitiveInformationHasBeenReviewed, true);
         }
 
         public static ILogger WithSensitiveInformation(this ILogger logger, SensitiveInformationType sensitiveInformationType, object value)
@@ -25,7 +24,7 @@ namespace Collector.Serilog.SensitiveInformation
 
         public static ILogger WithSensitiveInformation(this ILogger logger, string propertyName, object value)
         {
-            return logger.ForContext(propertyName, new Dictionary<string, object> { [SensitiveInformationEnricher.SensitiveInformation] = value }, destructureObjects: true);
+            return logger.ForContext(propertyName, new Dictionary<string, object> { [Constants.SensitiveInformation] = value }, destructureObjects: true);
         }
 
         public static LoggerConfiguration AsSensitive<T>(this LoggerDestructuringConfiguration conf, bool stringify = true)

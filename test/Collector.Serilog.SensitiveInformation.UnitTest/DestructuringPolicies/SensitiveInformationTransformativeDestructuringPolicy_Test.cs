@@ -19,7 +19,7 @@ namespace Collector.Serilog.SensitiveInformation.UnitTest.DestructuringPolicies
             Sink = new JsonSink();
             Logger = new LoggerConfiguration()
                 .Destructure.AsSensitiveByTransforming<TestClass>(tc => tc.Prop1 + tc.Prop2)
-                .Enrich.With<SensitiveInformationEnricher>()
+                .Enrich.With(new SensitiveInformationEnricher())
                 .WriteTo.Sink(Sink)
                 .CreateLogger();
         }

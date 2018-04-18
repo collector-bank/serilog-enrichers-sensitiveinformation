@@ -23,7 +23,7 @@ namespace Collector.Serilog.SensitiveInformation.UnitTest
         {
             return new LoggerConfiguration()
                 .Destructure.HasSensitiveProperties(properties)
-                .Enrich.With<SensitiveInformationEnricher>()
+                .Enrich.With(new SensitiveInformationEnricher())
                 .WriteTo.Sink(Sink)
                 .CreateLogger();
         }

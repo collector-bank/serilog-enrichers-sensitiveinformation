@@ -10,7 +10,7 @@ namespace Collector.Serilog.SensitiveInformation.Util
         {
             return new DictionaryValue(new Dictionary<ScalarValue, LogEventPropertyValue>
                                        {
-                                           [new ScalarValue(SensitiveInformationEnricher.SensitiveInformation)] = eventPropertyValue,
+                                           [new ScalarValue(Constants.SensitiveInformation)] = eventPropertyValue,
                                        });
         }
     }

@@ -39,5 +39,23 @@ namespace Collector.Serilog.SensitiveInformation.UnitTest
 
             Assert.Equal(@"{""__sensitiveInfo"":{""Anon"":{""Sensitive"":""SensitiveValue"",""Regular"":""RegularValue""}}}", Sink.Properties);
         }
+
+        [Fact]
+        public void When_an_anonymous_object_have_a_blacklisted_property_name_then_is_is_marked_as_sensitive()
+        {
+            Logger.ForContext("SomeName", new { Blacklisted = "Value" }, destructureObjects: true)
+                  .Information("Test");
+
+            Assert.Equal(@"{""__sensitiveInfo"":{""SomeName"":{""Blacklisted"":""Value""}}}", Sink.Properties);
+        }
+
+        [Fact]
+        public void When_an_anonymous_object_have_a_blacklisted_property_name_then_only_those_properties_are_marked_as_sensitive()
+        {
+            Logger.ForContext("Dic", new { Blacklisted = "Value", Regular = "RegularValue" }, destructureObjects: true)
+                  .Information("Test");
+
+            Assert.Equal(@"{""Dic"":{""Regular"":""RegularValue""},""__sensitiveInfo"":{""Dic"":{""Blacklisted"":""Value""}}}", Sink.Properties);
+        }
     }
 }
