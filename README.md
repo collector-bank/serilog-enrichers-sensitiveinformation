@@ -1,3 +1,4 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/e02riadn068cgwn6/branch/master?svg=true)](https://ci.appveyor.com/project/CollectorHeimdal/serilog-enricher-sensitiveinformation/branch/master)
 # Sensitive Information Enricher
 
 This repository includes the Serilog enricher SensitiveInformationEnricher, that will extract out and isolate all sensitive information in a log message.
@@ -40,7 +41,7 @@ var logger = new LoggerConfiguration()
             .WriteTo....
             .CreateLogger();
 ```
-This destructuring policy marks the given class as sensitive. A parameter can be given to tell the policy whether the object should be logged as-is (with all its properties deconstructed), or if the object should be stringified - i.e have its .ToString() method called.
+This destructuring policy marks the given class as sensitive. A parameter can be given to tell the policy whether the object should be logged as-is (with all its properties destructured), or if the object should be stringified - i.e have its .ToString() method called.
 
 #### Step 2.2 - HasSensitiveProperties
 
