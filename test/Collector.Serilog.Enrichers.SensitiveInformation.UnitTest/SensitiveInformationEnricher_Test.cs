@@ -1,13 +1,13 @@
 ﻿using System;
 
-using Collector.Serilog.Enricher.SensitiveInformation.UnitTest.Helpers;
+using Collector.Serilog.Enrichers.SensitiveInformation.UnitTest.Helpers;
 
 using Serilog;
 using Serilog.Core;
 
 using Xunit;
 
-namespace Collector.Serilog.Enricher.SensitiveInformation.UnitTest
+namespace Collector.Serilog.Enrichers.SensitiveInformation.UnitTest
 {
     public partial class SensitiveInformationEnricher_Test
     {

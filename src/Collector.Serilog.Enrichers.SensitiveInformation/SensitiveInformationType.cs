@@ -1,4 +1,4 @@
-﻿namespace Collector.Serilog.Enricher.SensitiveInformation
+﻿namespace Collector.Serilog.Enrichers.SensitiveInformation
 {
     public enum SensitiveInformationType
     {

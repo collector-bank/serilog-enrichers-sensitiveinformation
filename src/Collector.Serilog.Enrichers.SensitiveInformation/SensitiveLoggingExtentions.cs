@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-using Collector.Serilog.Enricher.SensitiveInformation.DestructuringPolicies;
-using Collector.Serilog.Enricher.SensitiveInformation.Util;
+using Collector.Serilog.Enrichers.SensitiveInformation.DestructuringPolicies;
+using Collector.Serilog.Enrichers.SensitiveInformation.Util;
 
 using Serilog;
 using Serilog.Configuration;
 
-namespace Collector.Serilog.Enricher.SensitiveInformation
+namespace Collector.Serilog.Enrichers.SensitiveInformation
 {
     public static class SensitiveLoggingExtentions
     {
