@@ -2,7 +2,7 @@
 
 using Xunit;
 
-namespace Collector.Serilog.SensitiveInformation.UnitTest
+namespace Collector.Serilog.Enricher.SensitiveInformation.UnitTest
 {
     public partial class SensitiveInformationEnricher_Test
     {

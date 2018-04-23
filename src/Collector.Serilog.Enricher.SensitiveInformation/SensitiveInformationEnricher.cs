@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,9 +6,9 @@ using Serilog.Core;
 using Serilog.Debugging;
 using Serilog.Events;
 
-using Constants = Collector.Serilog.SensitiveInformation.Util.Constants;
+using Constants = Collector.Serilog.Enricher.SensitiveInformation.Util.Constants;
 
-namespace Collector.Serilog.SensitiveInformation
+namespace Collector.Serilog.Enricher.SensitiveInformation
 {
     public class SensitiveInformationEnricher : ILogEventEnricher
     {

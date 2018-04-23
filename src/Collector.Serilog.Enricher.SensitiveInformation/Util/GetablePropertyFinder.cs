@@ -5,7 +5,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reflection;
 
-namespace Collector.Serilog.SensitiveInformation.Util
+namespace Collector.Serilog.Enricher.SensitiveInformation.Util
 {
     internal static class GetablePropertyFinder
     {
