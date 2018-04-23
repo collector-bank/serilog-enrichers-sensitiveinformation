@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Collector.Serilog.Enricher.SensitiveInformation.UnitTest.v3.ncrunchproject" />
+    <None Remove="Collector.Serilog.Enrichers.SensitiveInformation.UnitTest.v3.ncrunchproject" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Collector.Serilog.Enricher.SensitiveInformation\Collector.Serilog.Enricher.SensitiveInformation.csproj" />
+    <ProjectReference Include="..\..\src\Collector.Serilog.Enrichers.SensitiveInformation\Collector.Serilog.Enrichers.SensitiveInformation.csproj" />
   </ItemGroup>
 
 </Project>

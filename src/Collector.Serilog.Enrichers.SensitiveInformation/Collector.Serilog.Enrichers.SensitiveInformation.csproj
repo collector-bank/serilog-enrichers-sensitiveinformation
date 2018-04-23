@@ -15,8 +15,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Collector.Serilog.Enricher.SensitiveInformation.net45.v3.ncrunchproject" />
-    <None Remove="Collector.Serilog.Enricher.SensitiveInformation.netstandard1.1.v3.ncrunchproject" />
+    <None Remove="Collector.Serilog.Enrichers.SensitiveInformation.net45.v3.ncrunchproject" />
+    <None Remove="Collector.Serilog.Enrichers.SensitiveInformation.netstandard1.1.v3.ncrunchproject" />
   </ItemGroup>
 
   <ItemGroup>

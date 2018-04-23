@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace Collector.Serilog.Enricher.SensitiveInformation.UnitTest
+namespace Collector.Serilog.Enrichers.SensitiveInformation.UnitTest
 {
     public partial class SensitiveInformationEnricher_Test
     {

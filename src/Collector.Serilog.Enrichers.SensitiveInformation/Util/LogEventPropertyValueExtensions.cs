@@ -2,7 +2,7 @@
 
 using Serilog.Events;
 
-namespace Collector.Serilog.Enricher.SensitiveInformation.Util
+namespace Collector.Serilog.Enrichers.SensitiveInformation.Util
 {
     internal static class LogEventPropertyValueExtensions
     {

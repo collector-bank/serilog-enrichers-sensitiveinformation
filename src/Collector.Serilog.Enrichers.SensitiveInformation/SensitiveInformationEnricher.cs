@@ -6,9 +6,9 @@ using Serilog.Core;
 using Serilog.Debugging;
 using Serilog.Events;
 
-using Constants = Collector.Serilog.Enricher.SensitiveInformation.Util.Constants;
+using Constants = Collector.Serilog.Enrichers.SensitiveInformation.Util.Constants;
 
-namespace Collector.Serilog.Enricher.SensitiveInformation
+namespace Collector.Serilog.Enrichers.SensitiveInformation
 {
     public class SensitiveInformationEnricher : ILogEventEnricher
     {

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 
-using Collector.Serilog.Enricher.SensitiveInformation.Util;
+using Collector.Serilog.Enrichers.SensitiveInformation.Util;
 
 using Serilog.Core;
 using Serilog.Events;
 
-namespace Collector.Serilog.Enricher.SensitiveInformation.DestructuringPolicies
+namespace Collector.Serilog.Enrichers.SensitiveInformation.DestructuringPolicies
 {
     public class SensitiveInformationPropertyMarkingDestructuringPolicy<T> : IDestructuringPolicy
     {

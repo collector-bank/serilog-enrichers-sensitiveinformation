@@ -1,4 +1,4 @@
-﻿namespace Collector.Serilog.Enricher.SensitiveInformation.Util
+﻿namespace Collector.Serilog.Enrichers.SensitiveInformation.Util
 {
     internal class Constants
     {
