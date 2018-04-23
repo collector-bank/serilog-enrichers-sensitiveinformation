@@ -1,11 +1,11 @@
 ﻿using System;
 
-using Collector.Serilog.SensitiveInformation.Util;
+using Collector.Serilog.Enricher.SensitiveInformation.Util;
 
 using Serilog.Core;
 using Serilog.Events;
 
-namespace Collector.Serilog.SensitiveInformation.DestructuringPolicies
+namespace Collector.Serilog.Enricher.SensitiveInformation.DestructuringPolicies
 {
     public class SensitiveInformationTransformativeDestructuringPolicy<T> : IDestructuringPolicy
     {

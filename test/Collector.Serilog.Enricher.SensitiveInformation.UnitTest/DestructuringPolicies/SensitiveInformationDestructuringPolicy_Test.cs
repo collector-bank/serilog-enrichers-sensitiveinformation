@@ -1,13 +1,11 @@
-﻿using System;
-
-using Collector.Serilog.SensitiveInformation.UnitTest.Helpers;
+﻿using Collector.Serilog.Enricher.SensitiveInformation.UnitTest.Helpers;
 
 using Serilog;
 using Serilog.Core;
 
 using Xunit;
 
-namespace Collector.Serilog.SensitiveInformation.UnitTest.DestructuringPolicies
+namespace Collector.Serilog.Enricher.SensitiveInformation.UnitTest.DestructuringPolicies
 {
     public class SensitiveInformationDestructuringPolicy_Test
     {

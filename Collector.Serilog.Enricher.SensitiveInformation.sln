@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EBCCC004-FB3E-4B07-AE64-485556625982}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D1C91DA6-FD21-4849-BB64-B42E69716E37}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Collector.Serilog.Enricher.SensitiveInformation", "src\Collector.Serilog.Enricher.SensitiveInformation\Collector.Serilog.Enricher.SensitiveInformation.csproj", "{CAFAC3E4-2244-4458-962C-B19060BB610A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Collector.Serilog.Enricher.SensitiveInformation.UnitTest", "test\Collector.Serilog.Enricher.SensitiveInformation.UnitTest\Collector.Serilog.Enricher.SensitiveInformation.UnitTest.csproj", "{6B8190E9-668A-41C3-BA10-A5B079DE79EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAFAC3E4-2244-4458-962C-B19060BB610A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAFAC3E4-2244-4458-962C-B19060BB610A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAFAC3E4-2244-4458-962C-B19060BB610A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAFAC3E4-2244-4458-962C-B19060BB610A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B8190E9-668A-41C3-BA10-A5B079DE79EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B8190E9-668A-41C3-BA10-A5B079DE79EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B8190E9-668A-41C3-BA10-A5B079DE79EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B8190E9-668A-41C3-BA10-A5B079DE79EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CAFAC3E4-2244-4458-962C-B19060BB610A} = {EBCCC004-FB3E-4B07-AE64-485556625982}
+		{6B8190E9-668A-41C3-BA10-A5B079DE79EF} = {D1C91DA6-FD21-4849-BB64-B42E69716E37}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7EF95CE7-B2E2-4CB2-9DE2-2B53CDFA0E4E}
+	EndGlobalSection
+EndGlobal

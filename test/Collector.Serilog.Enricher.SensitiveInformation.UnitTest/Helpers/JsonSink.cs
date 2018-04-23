@@ -6,7 +6,7 @@ using Serilog.Core;
 using Serilog.Events;
 using Serilog.Formatting.Json;
 
-namespace Collector.Serilog.SensitiveInformation.UnitTest.Helpers
+namespace Collector.Serilog.Enricher.SensitiveInformation.UnitTest.Helpers
 {
     public class JsonSink : ILogEventSink
     {

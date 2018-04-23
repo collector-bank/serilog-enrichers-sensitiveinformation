@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Collector.Serilog.SensitiveInformation\Collector.Serilog.SensitiveInformation.csproj" />
+    <ProjectReference Include="..\..\src\Collector.Serilog.Enricher.SensitiveInformation\Collector.Serilog.Enricher.SensitiveInformation.csproj" />
   </ItemGroup>
 
 </Project>

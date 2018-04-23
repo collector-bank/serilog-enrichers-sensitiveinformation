@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Linq.Expressions;
 
-using Collector.Serilog.SensitiveInformation.UnitTest.Helpers;
+using Collector.Serilog.Enricher.SensitiveInformation.UnitTest.Helpers;
 
 using Serilog;
 using Serilog.Core;
 
 using Xunit;
 
-namespace Collector.Serilog.SensitiveInformation.UnitTest
+namespace Collector.Serilog.Enricher.SensitiveInformation.UnitTest.DestructuringPolicies
 {
     public class SensitiveInformationPropertyMarkingDestructuringPolicy_Test
     {
