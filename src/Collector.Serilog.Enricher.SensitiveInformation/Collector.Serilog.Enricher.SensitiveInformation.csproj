@@ -2,11 +2,21 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard1.1;net45</TargetFrameworks>
+    <Authors>Adam Lith</Authors>
+    <Company>Collector Bank AB</Company>
+    <Description>This repository includes the Serilog enricher SensitiveInformationEnricher, that will extract out and isolate all sensitive information in a log message.</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/collector-bank/serilog-enricher-sensitiveinformation</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/collector-bank/serilog-enricher-sensitiveinformation</PackageProjectUrl>
+    <PackageIconUrl>https://serilog.net/images/serilog-enricher-nuget.png</PackageIconUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Serilog</PackageTags>
+    <Version>1.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Collector.Serilog.SensitiveInformation.net45.v3.ncrunchproject" />
-    <None Remove="Collector.Serilog.SensitiveInformation.netstandard1.1.v3.ncrunchproject" />
+    <None Remove="Collector.Serilog.Enricher.SensitiveInformation.net45.v3.ncrunchproject" />
+    <None Remove="Collector.Serilog.Enricher.SensitiveInformation.netstandard1.1.v3.ncrunchproject" />
   </ItemGroup>
 
   <ItemGroup>
