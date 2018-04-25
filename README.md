@@ -75,6 +75,8 @@ This destructuring policy will apply a transform to any object of type MyClass t
 
 First of all, never EVER mix sensitive information in the message template of a log message. This library will not help you with that. So simply don't.
 
+#### Step 3.1 - ForContext & WithSensitiveInformation
+
 When logging it is instead recommended to use the .ForContext() method:
 
 ```csharp
@@ -96,6 +98,32 @@ logger.WithSensitiveInformation("Prop1", "RegularValue")
       .WithSensitiveInformation("Prop3", new { Name1 = "value", Name2 = mc})
       .WithSensitiveInformation("Prop4", new object[] { "value", mc})
       .Information("Test");
+```
+This will treat all the data points given to it as sensitive, so even if there might be some non-sensitive data in the MyClass class, it will still be treated as sensitive.
+
+#### Step 3.2 - LogContext & SensitiveLogContext
+
+Another good way to add properties to you log messages is using the LogContext.PushProperty() method:
+
+```csharp
+var mc = new MyClass();
+using (LogContext.PushProperty("Prop1", "RegularValue"))
+using (LogContext.PushProperty("Prop2", mc, destructureObjects: true))
+using (LogContext.PushProperty("Prop3", new { Name1 = "value", Name2 = mc} , true))
+using (LogContext.PushProperty("Prop4", new object[] { "value", mc} , destructureObjects: true))
+    logger.Information("Test");
+```
+This is also perfectly fine, and will be handled by the library, given that there exist a destructuring policy for MyClass.
+
+To explicitly tell the library that a static context should be treated as sensitive, instead use the SensitiveLogContext.PushProperty() method:
+
+```csharp
+var mc = new MyClass();
+using (SensitiveLogContext.PushProperty("Prop1", "RegularValue"))
+using (SensitiveLogContext.PushProperty("Prop2", mc,))
+using (SensitiveLogContext.PushProperty("Prop3", new { Name1 = "value", Name2 = mc }))
+using (SensitiveLogContext.PushProperty("Prop4", new object[] { "value", mc }))
+    logger.Information("Test");
 ```
 This will treat all the data points given to it as sensitive, so even if there might be some non-sensitive data in the MyClass class, it will still be treated as sensitive.
 
