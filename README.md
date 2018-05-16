@@ -54,9 +54,24 @@ var logger = new LoggerConfiguration()
             .WriteTo....
             .CreateLogger();
 ```
+
 This destructuring policy will make sure that whenever anyone logs an object of the type MyClass then the given properties are marked as sensitive, while all other properties of the object will be logged as usual.
 
-#### Step 2.3 - AsSensitiveByTransforming
+#### Step 2.3 - HasNonSensitiveProperties
+
+```csharp
+var logger = new LoggerConfiguration()
+            .Destructure.HasNonSensitiveProperties<MyClass>(
+                myclass => myclass.Prop3, 
+                myclass => myclass.Prop4)
+            .Enrich.With(new SensitiveInformationEnricher())
+            .WriteTo....
+            .CreateLogger();
+```
+
+This destructuring policy will make sure that whenever anyone logs an object of the type MyClass then the given properties are logged as usual, while all other properties of the object will be logged as sensitive.
+
+#### Step 2.4 - AsSensitiveByTransforming
 
 ```csharp
 var logger = new LoggerConfiguration()

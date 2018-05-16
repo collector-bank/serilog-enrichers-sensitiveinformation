@@ -10,11 +10,11 @@ using Xunit;
 
 namespace Collector.Serilog.Enrichers.SensitiveInformation.UnitTest.DestructuringPolicies
 {
-    public class SensitiveInformationPropertyMarkingDestructuringPolicy_Test
+    public class HasNonSensitiveProperties_Test
     {
         private JsonSink Sink { get; }
 
-        public SensitiveInformationPropertyMarkingDestructuringPolicy_Test()
+        public HasNonSensitiveProperties_Test()
         {
             Sink = new JsonSink();
         }
@@ -22,7 +22,7 @@ namespace Collector.Serilog.Enrichers.SensitiveInformation.UnitTest.Destructurin
         private Logger CreateLogger(params Expression<Func<TestClass, object>>[] properties)
         {
             return new LoggerConfiguration()
-                .Destructure.HasSensitiveProperties(properties)
+                .Destructure.HasNonSensitiveProperties(properties)
                 .Enrich.With(new SensitiveInformationEnricher())
                 .WriteTo.Sink(Sink)
                 .CreateLogger();
@@ -36,18 +36,7 @@ namespace Collector.Serilog.Enrichers.SensitiveInformation.UnitTest.Destructurin
             logger.ForContext("ContextName", new TestClass(), destructureObjects: true)
                   .Information("Test");
 
-            Assert.Equal(@"{""ContextName"":{""Prop1"":""Value1"",""Prop3"":""Value3""},""__sensitiveInfo"":{""ContextName"":{""Prop2"":""Value2""}}}", Sink.Properties);
-        }
-
-        [Fact]
-        public void When_destructuring_a_class_as_sensitive_with_an_expression_and_all_properties_are_marked_as_sensitive()
-        {
-            var logger = CreateLogger(tc => tc.Prop1, tc => tc.Prop2, tc => tc.Prop3);
-
-            logger.ForContext("ContextName", new TestClass(), destructureObjects: true)
-                  .Information("Test");
-
-            Assert.Equal(@"{""__sensitiveInfo"":{""ContextName"":{""Prop1"":""Value1"",""Prop2"":""Value2"",""Prop3"":""Value3""}}}", Sink.Properties);
+            Assert.Equal(@"{""ContextName"":{""Prop2"":""Value2""},""__sensitiveInfo"":{""ContextName"":{""Prop1"":""Value1"",""Prop3"":""Value3""}}}", Sink.Properties);
         }
 
 

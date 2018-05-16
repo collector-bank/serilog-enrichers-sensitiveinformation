@@ -10,13 +10,15 @@ using Serilog.Events;
 
 namespace Collector.Serilog.Enrichers.SensitiveInformation.DestructuringPolicies
 {
-    public class SensitiveInformationPropertyMarkingDestructuringPolicy<T> : IDestructuringPolicy
+    internal class SensitiveInformationPropertyMarkingDestructuringPolicy<T> : IDestructuringPolicy
     {
-        private readonly ISet<string> _sensitiveProperties;
+        private readonly bool _shouldContain;
+        private readonly ISet<string> _propertyNames;
 
-        public SensitiveInformationPropertyMarkingDestructuringPolicy(params Expression<Func<T, object>>[] sensitiveProperties)
+        public SensitiveInformationPropertyMarkingDestructuringPolicy(bool shouldContain, params Expression<Func<T, object>>[] properties)
         {
-            _sensitiveProperties = new HashSet<string>(sensitiveProperties.Select(e => e.Body).Cast<MemberExpression>().Select(m => m.Member.Name));
+            _shouldContain = shouldContain;
+            _propertyNames = new HashSet<string>(properties.Select(e => e.Body).Cast<MemberExpression>().Select(m => m.Member.Name));
         }
 
         public bool TryDestructure(object value, ILogEventPropertyValueFactory propertyValueFactory, out LogEventPropertyValue result)
@@ -31,7 +33,7 @@ namespace Collector.Serilog.Enrichers.SensitiveInformation.DestructuringPolicies
                 {
                     var propValue = propertyValueFactory.CreatePropertyValue(propertyInfo.GetValue(value), destructureObjects: true);
                     
-                    if (_sensitiveProperties.Contains(propertyInfo.Name))
+                    if (_propertyNames.Contains(propertyInfo.Name) == _shouldContain)
                         propValue = propValue.AsSensitive();
 
                     logEventProperties.Add(new LogEventProperty(propertyInfo.Name, propValue));

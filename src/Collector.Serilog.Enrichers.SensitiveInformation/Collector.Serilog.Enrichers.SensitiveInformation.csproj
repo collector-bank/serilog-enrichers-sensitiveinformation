@@ -11,7 +11,7 @@
     <PackageIconUrl>https://serilog.net/images/serilog-enricher-nuget.png</PackageIconUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Serilog</PackageTags>
-    <Version>1.1.0</Version>
+    <Version>1.2.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

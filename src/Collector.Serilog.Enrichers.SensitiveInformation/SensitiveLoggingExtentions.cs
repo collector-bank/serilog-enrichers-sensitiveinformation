@@ -39,7 +39,12 @@ namespace Collector.Serilog.Enrichers.SensitiveInformation
 
         public static LoggerConfiguration HasSensitiveProperties<T>(this LoggerDestructuringConfiguration conf, params Expression<Func<T, object>>[] sensitiveProperties)
         {
-            return conf.With(new SensitiveInformationPropertyMarkingDestructuringPolicy<T>(sensitiveProperties));
+            return conf.With(new SensitiveInformationPropertyMarkingDestructuringPolicy<T>(shouldContain: true, properties: sensitiveProperties));
+        }
+
+        public static LoggerConfiguration HasNonSensitiveProperties<T>(this LoggerDestructuringConfiguration conf, params Expression<Func<T, object>>[] sensitiveProperties)
+        {
+            return conf.With(new SensitiveInformationPropertyMarkingDestructuringPolicy<T>(shouldContain: false, properties: sensitiveProperties));
         }
     }
 }
