@@ -7,7 +7,7 @@ using Serilog.Events;
 
 namespace Collector.Serilog.Enrichers.SensitiveInformation.DestructuringPolicies
 {
-    public class SensitiveInformationDestructuringPolicy<T> : IDestructuringPolicy
+    internal class SensitiveInformationDestructuringPolicy<T> : IDestructuringPolicy
     {
         [ThreadStatic]
         // ReSharper disable once StaticMemberInGenericType, this is by intent.

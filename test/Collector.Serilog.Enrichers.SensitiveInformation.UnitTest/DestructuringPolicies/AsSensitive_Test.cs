@@ -7,11 +7,11 @@ using Xunit;
 
 namespace Collector.Serilog.Enrichers.SensitiveInformation.UnitTest.DestructuringPolicies
 {
-    public class SensitiveInformationDestructuringPolicy_Test
+    public class AsSensitive_Test
     {
         private JsonSink Sink { get; }
 
-        public SensitiveInformationDestructuringPolicy_Test()
+        public AsSensitive_Test()
         {
             Sink = new JsonSink();
         }

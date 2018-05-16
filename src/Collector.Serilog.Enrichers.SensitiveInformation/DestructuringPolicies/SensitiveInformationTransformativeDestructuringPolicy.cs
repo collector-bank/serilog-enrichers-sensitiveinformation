@@ -7,7 +7,7 @@ using Serilog.Events;
 
 namespace Collector.Serilog.Enrichers.SensitiveInformation.DestructuringPolicies
 {
-    public class SensitiveInformationTransformativeDestructuringPolicy<T> : IDestructuringPolicy
+    internal class SensitiveInformationTransformativeDestructuringPolicy<T> : IDestructuringPolicy
     {
         private readonly Func<T, object> _transform;
 

@@ -7,12 +7,12 @@ using Xunit;
 
 namespace Collector.Serilog.Enrichers.SensitiveInformation.UnitTest.DestructuringPolicies
 {
-    public class SensitiveInformationTransformativeDestructuringPolicy_Test
+    public class AsSensitiveByTransforming_Test
     {
         private Logger Logger { get; }
         private JsonSink Sink { get; }
 
-        public SensitiveInformationTransformativeDestructuringPolicy_Test()
+        public AsSensitiveByTransforming_Test()
         {
             Sink = new JsonSink();
             Logger = new LoggerConfiguration()

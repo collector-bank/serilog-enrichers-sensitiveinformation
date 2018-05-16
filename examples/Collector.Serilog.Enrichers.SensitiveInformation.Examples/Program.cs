@@ -6,9 +6,9 @@ namespace Collector.Serilog.Enrichers.SensitiveInformation.Examples
     {
         static void Main(string[] args)
         {
+            WithSensitiveInformationExample.Run();
             AsSensitiveExample.Run();
             HasSensitivePropertiesExample.Run();
-            WithSensitiveInformationExample.Run();
             BlacklistExample.Run();
         }
     }
