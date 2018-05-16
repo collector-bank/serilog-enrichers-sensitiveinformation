@@ -3,7 +3,7 @@
 
 This repository includes the Serilog enricher SensitiveInformationEnricher, that will extract out and isolate all sensitive information in a log message.
 
-DISCLAIMER: It is VERY important that you read to the very end of this readme if you intend to use this library, for it is at the end where you will learn how this will actually make us able to retain you log messages for longer than 3 months.
+DISCLAIMER: It is VERY important that you read to the very end of this readme if you intend to use this library, for it is at the end where you will learn how this will actually make us able to retain your log messages for longer than 3 months.
 
 ## Step 1 - Enricher
 
