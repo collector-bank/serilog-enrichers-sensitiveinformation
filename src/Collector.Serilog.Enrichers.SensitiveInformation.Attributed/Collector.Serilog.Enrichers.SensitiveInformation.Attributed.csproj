@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard1.1;net45</TargetFrameworks>
+    <Authors>Adam Lith</Authors>
+    <Company>Collector Bank AB</Company>
+    <Description>This package contains attribut support for the sensitive information enricher.</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/collector-bank/serilog-enricher-sensitiveinformation</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/collector-bank/serilog-enricher-sensitiveinformation</PackageProjectUrl>
+    <PackageIconUrl>https://serilog.net/images/serilog-enricher-nuget.png</PackageIconUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Serilog</PackageTags>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Collector.Serilog.Enrichers.SensitiveInformation.Attributed.net45.v3.ncrunchproject" />
+    <None Remove="Collector.Serilog.Enrichers.SensitiveInformation.Attributed.netstandard1.1.v3.ncrunchproject" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Destructurama.Attributed" Version="2.0.0" />
+    <PackageReference Include="Serilog" Version="2.6.0" />
+    <PackageReference Include="Collector.Serilog.Enrichers.SensitiveInformation" Version="1.2.1" />
+  </ItemGroup>
+
+</Project>

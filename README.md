@@ -1,4 +1,8 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/e02riadn068cgwn6/branch/master?svg=true)](https://ci.appveyor.com/project/CollectorHeimdal/serilog-enricher-sensitiveinformation/branch/master)
+
+[![NuGet](https://img.shields.io/nuget/v/Collector.Serilog.Enrichers.SensitiveInformation.svg)](https://www.nuget.org/packages/Collector.Serilog.Enrichers.SensitiveInformation) - Collector.Serilog.Enrichers.SensitiveInformation
+
+[![NuGet](https://img.shields.io/nuget/v/Collector.Serilog.Enrichers.SensitiveInformation.Attributed.svg)](https://www.nuget.org/packages/Collector.Serilog.Enrichers.SensitiveInformation.Attributed) - Collector.Serilog.Enrichers.SensitiveInformation.Attributed
 # Sensitive Information Enricher
 
 This repository includes the Serilog enricher SensitiveInformationEnricher, that will extract out and isolate all sensitive information in a log message.
@@ -84,7 +88,31 @@ var logger = new LoggerConfiguration()
             .WriteTo....
             .CreateLogger();
 ```
+
 This destructuring policy will apply a transform to any object of type MyClass the same way as the standard .ByTransforming<>() policy, but it will also mark the result as sensitive.
+
+#### Step 2.5 - Using Attributes
+
+You can choose to extend the attribute destructuring of the standard Serilog package [Destructurama.Attributed](https://www.nuget.org/packages/Destructurama.Attributed) by using the [Collector.Serilog.Enrichers.SensitiveInformation.Attributed](https://www.nuget.org/packages/Collector.Serilog.Enrichers.SensitiveInformation.Attributed/) package.
+
+```csharp
+private class TestClass
+{
+    public string Prop1 { get; set; }
+
+    [LogAsSensitive]
+    public string Prop2 { get; set; }
+
+    [NotLogged]
+    public string Prop3 { get; set; }
+}
+
+var logger = new LoggerConfiguration()
+            .Destructure.UsingAttributes()
+            .Enrich.With(new SensitiveInformationEnricher())
+            .WriteTo....
+            .CreateLogger();
+```
 
 ## Step 3 - When logging
 
