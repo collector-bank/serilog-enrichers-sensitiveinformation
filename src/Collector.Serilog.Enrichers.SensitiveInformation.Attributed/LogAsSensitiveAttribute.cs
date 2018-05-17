@@ -9,6 +9,7 @@ using Serilog.Events;
 
 namespace Collector.Serilog.Enrichers.SensitiveInformation.Attributed
 {
+    [AttributeUsage(AttributeTargets.Property)]
     public class LogAsSensitiveAttribute : Attribute, IPropertyDestructuringAttribute
     {
         private readonly SensitiveInformationType? _sensitiveInformationType;
