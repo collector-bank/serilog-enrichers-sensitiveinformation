@@ -4,7 +4,7 @@ using Serilog.Events;
 
 namespace Collector.Serilog.Enrichers.SensitiveInformation.Util
 {
-    internal static class LogEventPropertyValueExtensions
+    public static class LogEventPropertyValueExtensions
     {
         public static LogEventPropertyValue AsSensitive(this LogEventPropertyValue eventPropertyValue)
         {
